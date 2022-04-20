@@ -1,2203 +1,333 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="" tests="42" assertions="108" errors="0" warnings="0" failures="41" skipped="0" time="0.649689">
-    <testsuite name="Feature" tests="42" assertions="108" errors="0" warnings="0" failures="41" skipped="0" time="0.649689">
-      <testsuite name="Tests\Feature\BooksListTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookListTest.php" tests="7" assertions="73" errors="0" warnings="0" failures="6" skipped="0" time="0.236674">
-        <testcase name="testResponseStructure" class="Tests\Feature\BooksListTest" classname="Tests.Feature.BooksListTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookListTest.php" line="14" assertions="61" time="0.133116"/>
-        <testcase name="testListWithoutFilters" class="Tests\Feature\BooksListTest" classname="Tests.Feature.BooksListTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookListTest.php" line="72" assertions="2" time="0.026960">
-          <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BooksListTest::testListWithoutFilters
-Unable to find JSON: 
-  
-  [{
-      "data": [
-          {
-              "id": 1,
-              "isbn": "9791910433958",
-              "title": "Quidem consequatur laboriosam sit dolorum.",
-              "description": "Et et laudantium reiciendis dolor aut doloribus in. Impedit necessitatibus aliquam voluptas sit nulla perspiciatis. Placeat ut ab architecto.",
-              "authors": [
-                  {
-                      "id": 1,
-                      "name": "Dino Gulgowski",
-                      "surname": "Moore"
-                  }
-              ],
-              "review": {
-                  "avg": 5,
-                  "count": 3
-              }
-          },
-          {
-              "id": 2,
-              "isbn": "9781208767612",
-              "title": "Exercitationem sint qui iste et unde ea.",
-              "description": "Culpa tenetur atque laudantium sed. Quisquam molestias ut aut nemo ut et.",
-              "authors": [
-                  {
-                      "id": 2,
-                      "name": "Mr. Ayden Pagac",
-                      "surname": "Hirthe"
-                  }
-              ],
-              "review": {
-                  "avg": 4,
-                  "count": 3
-              }
-          },
-          {
-              "id": 3,
-              "isbn": "9787483467070",
-              "title": "Tempore vitae dolorem ipsam quos doloremque.",
-              "description": "Dicta rerum dolores quo voluptatem quasi repudiandae dolorem. Quis dicta sit vero natus enim. Magni nam natus neque consequatur repellat ut est.",
-              "authors": [
-                  {
-                      "id": 3,
-                      "name": "Dr. Ayden Bechtelar",
-                      "surname": "Mann"
-                  }
-              ],
-              "review": {
-                  "avg": 4,
-                  "count": 3
-              }
-          },
-          {
-              "id": 4,
-              "isbn": "9795463626232",
-              "title": "Recusandae est nisi placeat.",
-              "description": "Qui qui quae dolor occaecati perferendis debitis. Rem recusandae sit voluptate molestias. Doloribus neque alias debitis. Quis aut unde modi consequatur. Consequatur quia id voluptatem fuga.",
-              "authors": [
-                  {
-                      "id": 4,
-                      "name": "Fabiola Veum",
-                      "surname": "Ferry"
-                  }
-              ],
-              "review": {
-                  "avg": 5,
-                  "count": 3
-              }
-          },
-          {
-              "id": 5,
-              "isbn": "9786561055581",
-              "title": "Sit sint et rerum eligendi rerum odio vel.",
-              "description": "Hic placeat esse molestias molestiae molestias sed. Voluptatum commodi ea qui et voluptatum. Blanditiis cum ea optio deleniti quia doloribus.",
-              "authors": [
-                  {
-                      "id": 5,
-                      "name": "Norma Hartmann III",
-                      "surname": "Leannon"
-                  }
-              ],
-              "review": {
-                  "avg": 5,
-                  "count": 3
-              }
-          }
-      ]
-  }]
-  
-  within response JSON:
-  
-  [{
-      "data": [
-          {
-              "id": 1,
-              "isbn": "9791910433958",
-              "title": "Quidem consequatur laboriosam sit dolorum.",
-              "description": "Et et laudantium reiciendis dolor aut doloribus in. Impedit necessitatibus aliquam voluptas sit nulla perspiciatis. Placeat ut ab architecto.",
-              "authors": [],
-              "review": {
-                  "avg": "",
-                  "count": ""
-              }
-          },
-          {
-              "id": 2,
-              "isbn": "9781208767612",
-              "title": "Exercitationem sint qui iste et unde ea.",
-              "description": "Culpa tenetur atque laudantium sed. Quisquam molestias ut aut nemo ut et.",
-              "authors": [],
-              "review": {
-                  "avg": "",
-                  "count": ""
-              }
-          },
-          {
-              "id": 3,
-              "isbn": "9787483467070",
-              "title": "Tempore vitae dolorem ipsam quos doloremque.",
-              "description": "Dicta rerum dolores quo voluptatem quasi repudiandae dolorem. Quis dicta sit vero natus enim. Magni nam natus neque consequatur repellat ut est.",
-              "authors": [],
-              "review": {
-                  "avg": "",
-                  "count": ""
-              }
-          },
-          {
-              "id": 4,
-              "isbn": "9795463626232",
-              "title": "Recusandae est nisi placeat.",
-              "description": "Qui qui quae dolor occaecati perferendis debitis. Rem recusandae sit voluptate molestias. Doloribus neque alias debitis. Quis aut unde modi consequatur. Consequatur quia id voluptatem fuga.",
-              "authors": [],
-              "review": {
-                  "avg": "",
-                  "count": ""
-              }
-          },
-          {
-              "id": 5,
-              "isbn": "9786561055581",
-              "title": "Sit sint et rerum eligendi rerum odio vel.",
-              "description": "Hic placeat esse molestias molestiae molestias sed. Voluptatum commodi ea qui et voluptatum. Blanditiis cum ea optio deleniti quia doloribus.",
-              "authors": [],
-              "review": {
-                  "avg": "",
-                  "count": ""
-              }
-          }
-      ],
-      "links": {
-          "first": "http://localhost/api/books?page=1",
-          "last": "http://localhost/api/books?page=1",
-          "prev": null,
-          "next": null
-      },
-      "meta": {
-          "current_page": 1,
-          "from": 1,
-          "last_page": 1,
-          "links": [
-              {
-                  "url": null,
-                  "label": "&amp;laquo; Previous",
-                  "active": false
-              },
-              {
-                  "url": "http://localhost/api/books?page=1",
-                  "label": "1",
-                  "active": true
-              },
-              {
-                  "url": null,
-                  "label": "Next &amp;raquo;",
-                  "active": false
-              }
-          ],
-          "path": "http://localhost/api/books",
-          "per_page": 15,
-          "to": 5,
-          "total": 5
-      }
-  }].
-  
-  
-  Failed asserting that an array has the subset Array &amp;0 (
-      'data' =&gt; Array &amp;1 (
-          0 =&gt; Array &amp;2 (
-              'id' =&gt; 1
-              'isbn' =&gt; '9791910433958'
-              'title' =&gt; 'Quidem consequatur laboriosam sit dolorum.'
-              'description' =&gt; 'Et et laudantium reiciendis dolor aut doloribus in. Impedit necessitatibus aliquam voluptas sit nulla perspiciatis. Placeat ut ab architecto.'
-              'authors' =&gt; Array &amp;3 (
-                  0 =&gt; Array &amp;4 (
-                      'id' =&gt; 1
-                      'name' =&gt; 'Dino Gulgowski'
-                      'surname' =&gt; 'Moore'
-                  )
-              )
-              'review' =&gt; Array &amp;5 (
-                  'avg' =&gt; 5
-                  'count' =&gt; 3
-              )
-          )
-          1 =&gt; Array &amp;6 (
-              'id' =&gt; 2
-              'isbn' =&gt; '9781208767612'
-              'title' =&gt; 'Exercitationem sint qui iste et unde ea.'
-              'description' =&gt; 'Culpa tenetur atque laudantium sed. Quisquam molestias ut aut nemo ut et.'
-              'authors' =&gt; Array &amp;7 (
-                  0 =&gt; Array &amp;8 (
-                      'id' =&gt; 2
-                      'name' =&gt; 'Mr. Ayden Pagac'
-                      'surname' =&gt; 'Hirthe'
-                  )
-              )
-              'review' =&gt; Array &amp;9 (
-                  'avg' =&gt; 4
-                  'count' =&gt; 3
-              )
-          )
-          2 =&gt; Array &amp;10 (
-              'id' =&gt; 3
-              'isbn' =&gt; '9787483467070'
-              'title' =&gt; 'Tempore vitae dolorem ipsam quos doloremque.'
-              'description' =&gt; 'Dicta rerum dolores quo voluptatem quasi repudiandae dolorem. Quis dicta sit vero natus enim. Magni nam natus neque consequatur repellat ut est.'
-              'authors' =&gt; Array &amp;11 (
-                  0 =&gt; Array &amp;12 (
-                      'id' =&gt; 3
-                      'name' =&gt; 'Dr. Ayden Bechtelar'
-                      'surname' =&gt; 'Mann'
-                  )
-              )
-              'review' =&gt; Array &amp;13 (
-                  'avg' =&gt; 4
-                  'count' =&gt; 3
-              )
-          )
-          3 =&gt; Array &amp;14 (
-              'id' =&gt; 4
-              'isbn' =&gt; '9795463626232'
-              'title' =&gt; 'Recusandae est nisi placeat.'
-              'description' =&gt; 'Qui qui quae dolor occaecati perferendis debitis. Rem recusandae sit voluptate molestias. Doloribus neque alias debitis. Quis aut unde modi consequatur. Consequatur quia id voluptatem fuga.'
-              'authors' =&gt; Array &amp;15 (
-                  0 =&gt; Array &amp;16 (
-                      'id' =&gt; 4
-                      'name' =&gt; 'Fabiola Veum'
-                      'surname' =&gt; 'Ferry'
-                  )
-              )
-              'review' =&gt; Array &amp;17 (
-                  'avg' =&gt; 5
-                  'count' =&gt; 3
-              )
-          )
-          4 =&gt; Array &amp;18 (
-              'id' =&gt; 5
-              'isbn' =&gt; '9786561055581'
-              'title' =&gt; 'Sit sint et rerum eligendi rerum odio vel.'
-              'description' =&gt; 'Hic placeat esse molestias molestiae molestias sed. Voluptatum commodi ea qui et voluptatum. Blanditiis cum ea optio deleniti quia doloribus.'
-              'authors' =&gt; Array &amp;19 (
-                  0 =&gt; Array &amp;20 (
-                      'id' =&gt; 5
-                      'name' =&gt; 'Norma Hartmann III'
-                      'surname' =&gt; 'Leannon'
-                  )
-              )
-              'review' =&gt; Array &amp;21 (
-                  'avg' =&gt; 5
-                  'count' =&gt; 3
-              )
-          )
-      )
-  ).
---- Expected
-+++ Actual
-@@ @@
-       'description' =&gt; 'Et et laudantium reiciendis dolor aut doloribus in. Impedit necessitatibus aliquam voluptas sit nulla perspiciatis. Placeat ut ab architecto.',
-       'authors' =&gt; 
-       array (
--        0 =&gt; 
--        array (
--          'id' =&gt; 1,
--          'name' =&gt; 'Dino Gulgowski',
--          'surname' =&gt; 'Moore',
--        ),
-       ),
-       'review' =&gt; 
-       array (
--        'avg' =&gt; 5,
--        'count' =&gt; 3,
-+        'avg' =&gt; '',
-+        'count' =&gt; '',
-       ),
-     ),
-     1 =&gt; 
-@@ @@
-       'description' =&gt; 'Culpa tenetur atque laudantium sed. Quisquam molestias ut aut nemo ut et.',
-       'authors' =&gt; 
-       array (
--        0 =&gt; 
--        array (
--          'id' =&gt; 2,
--          'name' =&gt; 'Mr. Ayden Pagac',
--          'surname' =&gt; 'Hirthe',
--        ),
-       ),
-       'review' =&gt; 
-       array (
--        'avg' =&gt; 4,
--        'count' =&gt; 3,
-+        'avg' =&gt; '',
-+        'count' =&gt; '',
-       ),
-     ),
-     2 =&gt; 
-@@ @@
-       'description' =&gt; 'Dicta rerum dolores quo voluptatem quasi repudiandae dolorem. Quis dicta sit vero natus enim. Magni nam natus neque consequatur repellat ut est.',
-       'authors' =&gt; 
-       array (
--        0 =&gt; 
--        array (
--          'id' =&gt; 3,
--          'name' =&gt; 'Dr. Ayden Bechtelar',
--          'surname' =&gt; 'Mann',
--        ),
-       ),
-       'review' =&gt; 
-       array (
--        'avg' =&gt; 4,
--        'count' =&gt; 3,
-+        'avg' =&gt; '',
-+        'count' =&gt; '',
-       ),
-     ),
-     3 =&gt; 
-@@ @@
-       'description' =&gt; 'Qui qui quae dolor occaecati perferendis debitis. Rem recusandae sit voluptate molestias. Doloribus neque alias debitis. Quis aut unde modi consequatur. Consequatur quia id voluptatem fuga.',
-       'authors' =&gt; 
-       array (
--        0 =&gt; 
--        array (
--          'id' =&gt; 4,
--          'name' =&gt; 'Fabiola Veum',
--          'surname' =&gt; 'Ferry',
--        ),
-       ),
-       'review' =&gt; 
-       array (
--        'avg' =&gt; 5,
--        'count' =&gt; 3,
-+        'avg' =&gt; '',
-+        'count' =&gt; '',
-       ),
-     ),
-     4 =&gt; 
-@@ @@
-       'description' =&gt; 'Hic placeat esse molestias molestiae molestias sed. Voluptatum commodi ea qui et voluptatum. Blanditiis cum ea optio deleniti quia doloribus.',
-       'authors' =&gt; 
-       array (
--        0 =&gt; 
--        array (
--          'id' =&gt; 5,
--          'name' =&gt; 'Norma Hartmann III',
--          'surname' =&gt; 'Leannon',
--        ),
-       ),
-       'review' =&gt; 
-       array (
--        'avg' =&gt; 5,
--        'count' =&gt; 3,
-+        'avg' =&gt; '',
-+        'count' =&gt; '',
-       ),
-     ),
-   ),
-
-/home/mahmood/webserver/vandar/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/Constraints/ArraySubset.php:85
-/home/mahmood/webserver/vandar/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/Assert.php:40
-/home/mahmood/webserver/vandar/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/AssertableJsonString.php:273
-/home/mahmood/webserver/vandar/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:695
-/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookListTest.php:209
-/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookListTest.php:89</failure>
-        </testcase>
-        <testcase name="testTitleFilter" class="Tests\Feature\BooksListTest" classname="Tests.Feature.BooksListTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookListTest.php" line="92" assertions="2" time="0.011862">
+  <testsuite name="" tests="42" assertions="118" errors="0" warnings="0" failures="40" skipped="0" time="0.698850">
+    <testsuite name="Feature" tests="42" assertions="118" errors="0" warnings="0" failures="40" skipped="0" time="0.698850">
+      <testsuite name="Tests\Feature\BooksListTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookListTest.php" tests="7" assertions="83" errors="0" warnings="0" failures="5" skipped="0" time="0.250493">
+        <testcase name="testResponseStructure" class="Tests\Feature\BooksListTest" classname="Tests.Feature.BooksListTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookListTest.php" line="14" assertions="76" time="0.140554"/>
+        <testcase name="testListWithoutFilters" class="Tests\Feature\BooksListTest" classname="Tests.Feature.BooksListTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookListTest.php" line="72" assertions="2" time="0.029295"/>
+        <testcase name="testTitleFilter" class="Tests\Feature\BooksListTest" classname="Tests.Feature.BooksListTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookListTest.php" line="92" assertions="1" time="0.014955">
           <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BooksListTest::testTitleFilter
-Unable to find JSON: 
-  
-  [{
-      "data": [
-          {
-              "id": 1,
-              "isbn": "9788962699463",
-              "title": "PHP for begginers",
-              "description": "Ullam est a occaecati placeat eos rerum veniam. Expedita iste quisquam quia et ab. Ut inventore ex in.",
-              "authors": [],
-              "review": {
-                  "avg": 0,
-                  "count": 0
-              }
-          }
-      ]
-  }]
-  
-  within response JSON:
-  
-  [{
-      "data": [
-          {
-              "id": 1,
-              "isbn": "9788962699463",
-              "title": "PHP for begginers",
-              "description": "Ullam est a occaecati placeat eos rerum veniam. Expedita iste quisquam quia et ab. Ut inventore ex in.",
-              "authors": [],
-              "review": {
-                  "avg": "",
-                  "count": ""
-              }
-          },
-          {
-              "id": 2,
-              "isbn": "9791311629813",
-              "title": "Javascript for dummies",
-              "description": "Voluptas sed vitae inventore quaerat ea voluptates quaerat. Quo magni est occaecati. Architecto voluptas sit est ex aut explicabo id.",
-              "authors": [],
-              "review": {
-                  "avg": "",
-                  "count": ""
-              }
-          },
-          {
-              "id": 3,
-              "isbn": "9793826485977",
-              "title": "Advanced Python",
-              "description": "Et dicta et facere quae ut neque cumque eius. Minus quaerat dolorum tempora quidem nihil. At odio totam maxime quibusdam. Quos nemo praesentium sit ipsa.",
-              "authors": [],
-              "review": {
-                  "avg": "",
-                  "count": ""
-              }
-          }
-      ],
-      "links": {
-          "first": "http://localhost/api/books?page=1",
-          "last": "http://localhost/api/books?page=1",
-          "prev": null,
-          "next": null
-      },
-      "meta": {
-          "current_page": 1,
-          "from": 1,
-          "last_page": 1,
-          "links": [
-              {
-                  "url": null,
-                  "label": "&amp;laquo; Previous",
-                  "active": false
-              },
-              {
-                  "url": "http://localhost/api/books?page=1",
-                  "label": "1",
-                  "active": true
-              },
-              {
-                  "url": null,
-                  "label": "Next &amp;raquo;",
-                  "active": false
-              }
-          ],
-          "path": "http://localhost/api/books",
-          "per_page": 15,
-          "to": 3,
-          "total": 3
-      }
-  }].
-  
-  
-  Failed asserting that an array has the subset Array &amp;0 (
-      'data' =&gt; Array &amp;1 (
-          0 =&gt; Array &amp;2 (
-              'id' =&gt; 1
-              'isbn' =&gt; '9788962699463'
-              'title' =&gt; 'PHP for begginers'
-              'description' =&gt; 'Ullam est a occaecati placeat eos rerum veniam. Expedita iste quisquam quia et ab. Ut inventore ex in.'
-              'authors' =&gt; Array &amp;3 ()
-              'review' =&gt; Array &amp;4 (
-                  'avg' =&gt; 0
-                  'count' =&gt; 0
-              )
-          )
-      )
-  ).
---- Expected
-+++ Actual
-@@ @@
-       ),
-       'review' =&gt; 
-       array (
--        'avg' =&gt; 0,
--        'count' =&gt; 0,
-+        'avg' =&gt; '',
-+        'count' =&gt; '',
-       ),
-     ),
-     1 =&gt;
+Expected response status code [200] but received 500.
+Failed asserting that 200 is identical to 500.
 
-/home/mahmood/webserver/vandar/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/Constraints/ArraySubset.php:85
-/home/mahmood/webserver/vandar/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/Assert.php:40
-/home/mahmood/webserver/vandar/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/AssertableJsonString.php:273
-/home/mahmood/webserver/vandar/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:695
-/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookListTest.php:209
-/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookListTest.php:101</failure>
+/home/mahmood/webserver/vandar/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
+/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookListTest.php:100</failure>
         </testcase>
-        <testcase name="testAuthorsFilter" class="Tests\Feature\BooksListTest" classname="Tests.Feature.BooksListTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookListTest.php" line="109" assertions="2" time="0.013573">
+        <testcase name="testAuthorsFilter" class="Tests\Feature\BooksListTest" classname="Tests.Feature.BooksListTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookListTest.php" line="109" assertions="1" time="0.014318">
           <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BooksListTest::testAuthorsFilter
-Unable to find JSON: 
-  
-  [{
-      "data": [
-          {
-              "id": 1,
-              "isbn": "9782583644130",
-              "title": "PHP for begginers",
-              "description": "Consectetur provident quis cupiditate qui beatae. Velit consequuntur qui praesentium. Qui qui asperiores quidem cupiditate aut.",
-              "authors": [
-                  {
-                      "id": 1,
-                      "name": "Jerrod Sawayn",
-                      "surname": "Bins"
-                  },
-                  {
-                      "id": 2,
-                      "name": "Reyna Ratke III",
-                      "surname": "Ankunding"
-                  }
-              ],
-              "review": {
-                  "avg": 0,
-                  "count": 0
-              }
-          },
-          {
-              "id": 2,
-              "isbn": "9781735957999",
-              "title": "Javascript for dummies",
-              "description": "Vitae aliquid ab id reiciendis animi. Aut commodi pariatur in voluptatem. Sunt tempore nobis facere et nesciunt. Quos consequatur quis et illo.",
-              "authors": [
-                  {
-                      "id": 1,
-                      "name": "Jerrod Sawayn",
-                      "surname": "Bins"
-                  }
-              ],
-              "review": {
-                  "avg": 0,
-                  "count": 0
-              }
-          }
-      ]
-  }]
-  
-  within response JSON:
-  
-  [{
-      "data": [
-          {
-              "id": 1,
-              "isbn": "9782583644130",
-              "title": "PHP for begginers",
-              "description": "Consectetur provident quis cupiditate qui beatae. Velit consequuntur qui praesentium. Qui qui asperiores quidem cupiditate aut.",
-              "authors": [],
-              "review": {
-                  "avg": "",
-                  "count": ""
-              }
-          },
-          {
-              "id": 2,
-              "isbn": "9781735957999",
-              "title": "Javascript for dummies",
-              "description": "Vitae aliquid ab id reiciendis animi. Aut commodi pariatur in voluptatem. Sunt tempore nobis facere et nesciunt. Quos consequatur quis et illo.",
-              "authors": [],
-              "review": {
-                  "avg": "",
-                  "count": ""
-              }
-          },
-          {
-              "id": 3,
-              "isbn": "9795365348744",
-              "title": "Advanced Python",
-              "description": "Temporibus aut quidem sint rerum. Rerum exercitationem omnis illo. Sit sed consequuntur et assumenda cupiditate unde eos quae.",
-              "authors": [],
-              "review": {
-                  "avg": "",
-                  "count": ""
-              }
-          }
-      ],
-      "links": {
-          "first": "http://localhost/api/books?page=1",
-          "last": "http://localhost/api/books?page=1",
-          "prev": null,
-          "next": null
-      },
-      "meta": {
-          "current_page": 1,
-          "from": 1,
-          "last_page": 1,
-          "links": [
-              {
-                  "url": null,
-                  "label": "&amp;laquo; Previous",
-                  "active": false
-              },
-              {
-                  "url": "http://localhost/api/books?page=1",
-                  "label": "1",
-                  "active": true
-              },
-              {
-                  "url": null,
-                  "label": "Next &amp;raquo;",
-                  "active": false
-              }
-          ],
-          "path": "http://localhost/api/books",
-          "per_page": 15,
-          "to": 3,
-          "total": 3
-      }
-  }].
-  
-  
-  Failed asserting that an array has the subset Array &amp;0 (
-      'data' =&gt; Array &amp;1 (
-          0 =&gt; Array &amp;2 (
-              'id' =&gt; 1
-              'isbn' =&gt; '9782583644130'
-              'title' =&gt; 'PHP for begginers'
-              'description' =&gt; 'Consectetur provident quis cupiditate qui beatae. Velit consequuntur qui praesentium. Qui qui asperiores quidem cupiditate aut.'
-              'authors' =&gt; Array &amp;3 (
-                  0 =&gt; Array &amp;4 (
-                      'id' =&gt; 1
-                      'name' =&gt; 'Jerrod Sawayn'
-                      'surname' =&gt; 'Bins'
-                  )
-                  1 =&gt; Array &amp;5 (
-                      'id' =&gt; 2
-                      'name' =&gt; 'Reyna Ratke III'
-                      'surname' =&gt; 'Ankunding'
-                  )
-              )
-              'review' =&gt; Array &amp;6 (
-                  'avg' =&gt; 0
-                  'count' =&gt; 0
-              )
-          )
-          1 =&gt; Array &amp;7 (
-              'id' =&gt; 2
-              'isbn' =&gt; '9781735957999'
-              'title' =&gt; 'Javascript for dummies'
-              'description' =&gt; 'Vitae aliquid ab id reiciendis animi. Aut commodi pariatur in voluptatem. Sunt tempore nobis facere et nesciunt. Quos consequatur quis et illo.'
-              'authors' =&gt; Array &amp;8 (
-                  0 =&gt; Array &amp;9 (
-                      'id' =&gt; 1
-                      'name' =&gt; 'Jerrod Sawayn'
-                      'surname' =&gt; 'Bins'
-                  )
-              )
-              'review' =&gt; Array &amp;10 (
-                  'avg' =&gt; 0
-                  'count' =&gt; 0
-              )
-          )
-      )
-  ).
---- Expected
-+++ Actual
-@@ @@
-       'description' =&gt; 'Consectetur provident quis cupiditate qui beatae. Velit consequuntur qui praesentium. Qui qui asperiores quidem cupiditate aut.',
-       'authors' =&gt; 
-       array (
--        0 =&gt; 
--        array (
--          'id' =&gt; 1,
--          'name' =&gt; 'Jerrod Sawayn',
--          'surname' =&gt; 'Bins',
--        ),
--        1 =&gt; 
--        array (
--          'id' =&gt; 2,
--          'name' =&gt; 'Reyna Ratke III',
--          'surname' =&gt; 'Ankunding',
--        ),
-       ),
-       'review' =&gt; 
-       array (
--        'avg' =&gt; 0,
--        'count' =&gt; 0,
-+        'avg' =&gt; '',
-+        'count' =&gt; '',
-       ),
-     ),
-     1 =&gt; 
-@@ @@
-       'description' =&gt; 'Vitae aliquid ab id reiciendis animi. Aut commodi pariatur in voluptatem. Sunt tempore nobis facere et nesciunt. Quos consequatur quis et illo.',
-       'authors' =&gt; 
-       array (
--        0 =&gt; 
--        array (
--          'id' =&gt; 1,
--          'name' =&gt; 'Jerrod Sawayn',
--          'surname' =&gt; 'Bins',
--        ),
-       ),
-       'review' =&gt; 
-       array (
--        'avg' =&gt; 0,
--        'count' =&gt; 0,
-+        'avg' =&gt; '',
-+        'count' =&gt; '',
-       ),
-     ),
-     2 =&gt;
+Expected response status code [200] but received 500.
+Failed asserting that 200 is identical to 500.
 
-/home/mahmood/webserver/vandar/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/Constraints/ArraySubset.php:85
-/home/mahmood/webserver/vandar/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/Assert.php:40
-/home/mahmood/webserver/vandar/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/AssertableJsonString.php:273
-/home/mahmood/webserver/vandar/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:695
-/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookListTest.php:209
-/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookListTest.php:126</failure>
+/home/mahmood/webserver/vandar/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
+/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookListTest.php:124</failure>
         </testcase>
-        <testcase name="testTitleSort" class="Tests\Feature\BooksListTest" classname="Tests.Feature.BooksListTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookListTest.php" line="139" assertions="2" time="0.012951">
+        <testcase name="testTitleSort" class="Tests\Feature\BooksListTest" classname="Tests.Feature.BooksListTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookListTest.php" line="139" assertions="1" time="0.014182">
           <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BooksListTest::testTitleSort
-Unable to find JSON: 
-  
-  [{
-      "data": [
-          {
-              "id": 3,
-              "isbn": "9784792955236",
-              "title": "Advanced Python",
-              "description": "Velit in eos rem. Quae error ipsa quod et quas vel voluptates. Quo autem rem vel hic. Assumenda et labore incidunt qui modi vitae aliquid. Aspernatur a repudiandae aut in rem.",
-              "authors": [],
-              "review": {
-                  "avg": 0,
-                  "count": 0
-              }
-          },
-          {
-              "id": 2,
-              "isbn": "9787220655258",
-              "title": "Javascript for dummies",
-              "description": "Ad laudantium et saepe. Repudiandae sed rerum voluptatem itaque temporibus ipsum atque.",
-              "authors": [],
-              "review": {
-                  "avg": 0,
-                  "count": 0
-              }
-          },
-          {
-              "id": 1,
-              "isbn": "9788970977201",
-              "title": "PHP for begginers",
-              "description": "Sint officia inventore non placeat. Repudiandae ut harum ducimus ex et ipsam. Dolor fugiat vel et quae. Ipsam voluptatem dicta et fugiat. Nihil porro perspiciatis perferendis illo.",
-              "authors": [],
-              "review": {
-                  "avg": 0,
-                  "count": 0
-              }
-          }
-      ]
-  }]
-  
-  within response JSON:
-  
-  [{
-      "data": [
-          {
-              "id": 1,
-              "isbn": "9788970977201",
-              "title": "PHP for begginers",
-              "description": "Sint officia inventore non placeat. Repudiandae ut harum ducimus ex et ipsam. Dolor fugiat vel et quae. Ipsam voluptatem dicta et fugiat. Nihil porro perspiciatis perferendis illo.",
-              "authors": [],
-              "review": {
-                  "avg": "",
-                  "count": ""
-              }
-          },
-          {
-              "id": 2,
-              "isbn": "9787220655258",
-              "title": "Javascript for dummies",
-              "description": "Ad laudantium et saepe. Repudiandae sed rerum voluptatem itaque temporibus ipsum atque.",
-              "authors": [],
-              "review": {
-                  "avg": "",
-                  "count": ""
-              }
-          },
-          {
-              "id": 3,
-              "isbn": "9784792955236",
-              "title": "Advanced Python",
-              "description": "Velit in eos rem. Quae error ipsa quod et quas vel voluptates. Quo autem rem vel hic. Assumenda et labore incidunt qui modi vitae aliquid. Aspernatur a repudiandae aut in rem.",
-              "authors": [],
-              "review": {
-                  "avg": "",
-                  "count": ""
-              }
-          }
-      ],
-      "links": {
-          "first": "http://localhost/api/books?page=1",
-          "last": "http://localhost/api/books?page=1",
-          "prev": null,
-          "next": null
-      },
-      "meta": {
-          "current_page": 1,
-          "from": 1,
-          "last_page": 1,
-          "links": [
-              {
-                  "url": null,
-                  "label": "&amp;laquo; Previous",
-                  "active": false
-              },
-              {
-                  "url": "http://localhost/api/books?page=1",
-                  "label": "1",
-                  "active": true
-              },
-              {
-                  "url": null,
-                  "label": "Next &amp;raquo;",
-                  "active": false
-              }
-          ],
-          "path": "http://localhost/api/books",
-          "per_page": 15,
-          "to": 3,
-          "total": 3
-      }
-  }].
-  
-  
-  Failed asserting that an array has the subset Array &amp;0 (
-      'data' =&gt; Array &amp;1 (
-          0 =&gt; Array &amp;2 (
-              'id' =&gt; 3
-              'isbn' =&gt; '9784792955236'
-              'title' =&gt; 'Advanced Python'
-              'description' =&gt; 'Velit in eos rem. Quae error ipsa quod et quas vel voluptates. Quo autem rem vel hic. Assumenda et labore incidunt qui modi vitae aliquid. Aspernatur a repudiandae aut in rem.'
-              'authors' =&gt; Array &amp;3 ()
-              'review' =&gt; Array &amp;4 (
-                  'avg' =&gt; 0
-                  'count' =&gt; 0
-              )
-          )
-          1 =&gt; Array &amp;5 (
-              'id' =&gt; 2
-              'isbn' =&gt; '9787220655258'
-              'title' =&gt; 'Javascript for dummies'
-              'description' =&gt; 'Ad laudantium et saepe. Repudiandae sed rerum voluptatem itaque temporibus ipsum atque.'
-              'authors' =&gt; Array &amp;6 ()
-              'review' =&gt; Array &amp;7 (
-                  'avg' =&gt; 0
-                  'count' =&gt; 0
-              )
-          )
-          2 =&gt; Array &amp;8 (
-              'id' =&gt; 1
-              'isbn' =&gt; '9788970977201'
-              'title' =&gt; 'PHP for begginers'
-              'description' =&gt; 'Sint officia inventore non placeat. Repudiandae ut harum ducimus ex et ipsam. Dolor fugiat vel et quae. Ipsam voluptatem dicta et fugiat. Nihil porro perspiciatis perferendis illo.'
-              'authors' =&gt; Array &amp;9 ()
-              'review' =&gt; Array &amp;10 (
-                  'avg' =&gt; 0
-                  'count' =&gt; 0
-              )
-          )
-      )
-  ).
---- Expected
-+++ Actual
-@@ @@
-   array (
-     0 =&gt; 
-     array (
--      'id' =&gt; 3,
--      'isbn' =&gt; '9784792955236',
--      'title' =&gt; 'Advanced Python',
--      'description' =&gt; 'Velit in eos rem. Quae error ipsa quod et quas vel voluptates. Quo autem rem vel hic. Assumenda et labore incidunt qui modi vitae aliquid. Aspernatur a repudiandae aut in rem.',
-+      'id' =&gt; 1,
-+      'isbn' =&gt; '9788970977201',
-+      'title' =&gt; 'PHP for begginers',
-+      'description' =&gt; 'Sint officia inventore non placeat. Repudiandae ut harum ducimus ex et ipsam. Dolor fugiat vel et quae. Ipsam voluptatem dicta et fugiat. Nihil porro perspiciatis perferendis illo.',
-       'authors' =&gt; 
-       array (
-       ),
-       'review' =&gt; 
-       array (
--        'avg' =&gt; 0,
--        'count' =&gt; 0,
-+        'avg' =&gt; '',
-+        'count' =&gt; '',
-       ),
-     ),
-     1 =&gt; 
-@@ @@
-       ),
-       'review' =&gt; 
-       array (
--        'avg' =&gt; 0,
--        'count' =&gt; 0,
-+        'avg' =&gt; '',
-+        'count' =&gt; '',
-       ),
-     ),
-     2 =&gt; 
-     array (
--      'id' =&gt; 1,
--      'isbn' =&gt; '9788970977201',
--      'title' =&gt; 'PHP for begginers',
--      'description' =&gt; 'Sint officia inventore non placeat. Repudiandae ut harum ducimus ex et ipsam. Dolor fugiat vel et quae. Ipsam voluptatem dicta et fugiat. Nihil porro perspiciatis perferendis illo.',
-+      'id' =&gt; 3,
-+      'isbn' =&gt; '9784792955236',
-+      'title' =&gt; 'Advanced Python',
-+      'description' =&gt; 'Velit in eos rem. Quae error ipsa quod et quas vel voluptates. Quo autem rem vel hic. Assumenda et labore incidunt qui modi vitae aliquid. Aspernatur a repudiandae aut in rem.',
-       'authors' =&gt; 
-       array (
-       ),
-       'review' =&gt; 
-       array (
--        'avg' =&gt; 0,
--        'count' =&gt; 0,
-+        'avg' =&gt; '',
-+        'count' =&gt; '',
-       ),
-     ),
-   ),
+Expected response status code [200] but received 500.
+Failed asserting that 200 is identical to 500.
 
-/home/mahmood/webserver/vandar/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/Constraints/ArraySubset.php:85
-/home/mahmood/webserver/vandar/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/Assert.php:40
-/home/mahmood/webserver/vandar/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/AssertableJsonString.php:273
-/home/mahmood/webserver/vandar/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:695
-/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookListTest.php:209
-/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookListTest.php:149</failure>
+/home/mahmood/webserver/vandar/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
+/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookListTest.php:147</failure>
         </testcase>
-        <testcase name="testAvgReviewSort" class="Tests\Feature\BooksListTest" classname="Tests.Feature.BooksListTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookListTest.php" line="157" assertions="2" time="0.014269">
+        <testcase name="testAvgReviewSort" class="Tests\Feature\BooksListTest" classname="Tests.Feature.BooksListTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookListTest.php" line="157" assertions="1" time="0.016961">
           <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BooksListTest::testAvgReviewSort
-Unable to find JSON: 
-  
-  [{
-      "data": [
-          {
-              "id": 3,
-              "isbn": "9790162221351",
-              "title": "Advanced Python",
-              "description": "Quasi et dolore deserunt sed ab libero. Quo magni aut accusantium occaecati est qui. Neque voluptate aperiam nobis magnam id voluptatem necessitatibus sequi. Iste non voluptate dolorum suscipit.",
-              "authors": [],
-              "review": {
-                  "avg": 0,
-                  "count": 0
-              }
-          },
-          {
-              "id": 1,
-              "isbn": "9791379837519",
-              "title": "PHP for begginers",
-              "description": "A non eos atque aut officiis sunt. Quam et voluptate et maxime ut. Adipisci consequatur architecto delectus in quia.",
-              "authors": [],
-              "review": {
-                  "avg": 3,
-                  "count": 2
-              }
-          },
-          {
-              "id": 2,
-              "isbn": "9789352326013",
-              "title": "Javascript for dummies",
-              "description": "Veniam voluptatum voluptatem repellendus. Beatae a quas aut. Est id consectetur eveniet. Sint saepe non amet. Laudantium assumenda similique consequuntur perferendis consequatur.",
-              "authors": [],
-              "review": {
-                  "avg": 6,
-                  "count": 2
-              }
-          }
-      ]
-  }]
-  
-  within response JSON:
-  
-  [{
-      "data": [
-          {
-              "id": 1,
-              "isbn": "9791379837519",
-              "title": "PHP for begginers",
-              "description": "A non eos atque aut officiis sunt. Quam et voluptate et maxime ut. Adipisci consequatur architecto delectus in quia.",
-              "authors": [],
-              "review": {
-                  "avg": "",
-                  "count": ""
-              }
-          },
-          {
-              "id": 2,
-              "isbn": "9789352326013",
-              "title": "Javascript for dummies",
-              "description": "Veniam voluptatum voluptatem repellendus. Beatae a quas aut. Est id consectetur eveniet. Sint saepe non amet. Laudantium assumenda similique consequuntur perferendis consequatur.",
-              "authors": [],
-              "review": {
-                  "avg": "",
-                  "count": ""
-              }
-          },
-          {
-              "id": 3,
-              "isbn": "9790162221351",
-              "title": "Advanced Python",
-              "description": "Quasi et dolore deserunt sed ab libero. Quo magni aut accusantium occaecati est qui. Neque voluptate aperiam nobis magnam id voluptatem necessitatibus sequi. Iste non voluptate dolorum suscipit.",
-              "authors": [],
-              "review": {
-                  "avg": "",
-                  "count": ""
-              }
-          }
-      ],
-      "links": {
-          "first": "http://localhost/api/books?page=1",
-          "last": "http://localhost/api/books?page=1",
-          "prev": null,
-          "next": null
-      },
-      "meta": {
-          "current_page": 1,
-          "from": 1,
-          "last_page": 1,
-          "links": [
-              {
-                  "url": null,
-                  "label": "&amp;laquo; Previous",
-                  "active": false
-              },
-              {
-                  "url": "http://localhost/api/books?page=1",
-                  "label": "1",
-                  "active": true
-              },
-              {
-                  "url": null,
-                  "label": "Next &amp;raquo;",
-                  "active": false
-              }
-          ],
-          "path": "http://localhost/api/books",
-          "per_page": 15,
-          "to": 3,
-          "total": 3
-      }
-  }].
-  
-  
-  Failed asserting that an array has the subset Array &amp;0 (
-      'data' =&gt; Array &amp;1 (
-          0 =&gt; Array &amp;2 (
-              'id' =&gt; 3
-              'isbn' =&gt; '9790162221351'
-              'title' =&gt; 'Advanced Python'
-              'description' =&gt; 'Quasi et dolore deserunt sed ab libero. Quo magni aut accusantium occaecati est qui. Neque voluptate aperiam nobis magnam id voluptatem necessitatibus sequi. Iste non voluptate dolorum suscipit.'
-              'authors' =&gt; Array &amp;3 ()
-              'review' =&gt; Array &amp;4 (
-                  'avg' =&gt; 0
-                  'count' =&gt; 0
-              )
-          )
-          1 =&gt; Array &amp;5 (
-              'id' =&gt; 1
-              'isbn' =&gt; '9791379837519'
-              'title' =&gt; 'PHP for begginers'
-              'description' =&gt; 'A non eos atque aut officiis sunt. Quam et voluptate et maxime ut. Adipisci consequatur architecto delectus in quia.'
-              'authors' =&gt; Array &amp;6 ()
-              'review' =&gt; Array &amp;7 (
-                  'avg' =&gt; 3
-                  'count' =&gt; 2
-              )
-          )
-          2 =&gt; Array &amp;8 (
-              'id' =&gt; 2
-              'isbn' =&gt; '9789352326013'
-              'title' =&gt; 'Javascript for dummies'
-              'description' =&gt; 'Veniam voluptatum voluptatem repellendus. Beatae a quas aut. Est id consectetur eveniet. Sint saepe non amet. Laudantium assumenda similique consequuntur perferendis consequatur.'
-              'authors' =&gt; Array &amp;9 ()
-              'review' =&gt; Array &amp;10 (
-                  'avg' =&gt; 6
-                  'count' =&gt; 2
-              )
-          )
-      )
-  ).
---- Expected
-+++ Actual
-@@ @@
-   array (
-     0 =&gt; 
-     array (
--      'id' =&gt; 3,
--      'isbn' =&gt; '9790162221351',
--      'title' =&gt; 'Advanced Python',
--      'description' =&gt; 'Quasi et dolore deserunt sed ab libero. Quo magni aut accusantium occaecati est qui. Neque voluptate aperiam nobis magnam id voluptatem necessitatibus sequi. Iste non voluptate dolorum suscipit.',
-+      'id' =&gt; 1,
-+      'isbn' =&gt; '9791379837519',
-+      'title' =&gt; 'PHP for begginers',
-+      'description' =&gt; 'A non eos atque aut officiis sunt. Quam et voluptate et maxime ut. Adipisci consequatur architecto delectus in quia.',
-       'authors' =&gt; 
-       array (
-       ),
-       'review' =&gt; 
-       array (
--        'avg' =&gt; 0,
--        'count' =&gt; 0,
-+        'avg' =&gt; '',
-+        'count' =&gt; '',
-       ),
-     ),
-     1 =&gt; 
-     array (
--      'id' =&gt; 1,
--      'isbn' =&gt; '9791379837519',
--      'title' =&gt; 'PHP for begginers',
--      'description' =&gt; 'A non eos atque aut officiis sunt. Quam et voluptate et maxime ut. Adipisci consequatur architecto delectus in quia.',
-+      'id' =&gt; 2,
-+      'isbn' =&gt; '9789352326013',
-+      'title' =&gt; 'Javascript for dummies',
-+      'description' =&gt; 'Veniam voluptatum voluptatem repellendus. Beatae a quas aut. Est id consectetur eveniet. Sint saepe non amet. Laudantium assumenda similique consequuntur perferendis consequatur.',
-       'authors' =&gt; 
-       array (
-       ),
-       'review' =&gt; 
-       array (
--        'avg' =&gt; 3,
--        'count' =&gt; 2,
-+        'avg' =&gt; '',
-+        'count' =&gt; '',
-       ),
-     ),
-     2 =&gt; 
-     array (
--      'id' =&gt; 2,
--      'isbn' =&gt; '9789352326013',
--      'title' =&gt; 'Javascript for dummies',
--      'description' =&gt; 'Veniam voluptatum voluptatem repellendus. Beatae a quas aut. Est id consectetur eveniet. Sint saepe non amet. Laudantium assumenda similique consequuntur perferendis consequatur.',
-+      'id' =&gt; 3,
-+      'isbn' =&gt; '9790162221351',
-+      'title' =&gt; 'Advanced Python',
-+      'description' =&gt; 'Quasi et dolore deserunt sed ab libero. Quo magni aut accusantium occaecati est qui. Neque voluptate aperiam nobis magnam id voluptatem necessitatibus sequi. Iste non voluptate dolorum suscipit.',
-       'authors' =&gt; 
-       array (
-       ),
-       'review' =&gt; 
-       array (
--        'avg' =&gt; 6,
--        'count' =&gt; 2,
-+        'avg' =&gt; '',
-+        'count' =&gt; '',
-       ),
-     ),
-   ),
+Expected response status code [200] but received 500.
+Failed asserting that 200 is identical to 500.
 
-/home/mahmood/webserver/vandar/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/Constraints/ArraySubset.php:85
-/home/mahmood/webserver/vandar/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/Assert.php:40
-/home/mahmood/webserver/vandar/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/AssertableJsonString.php:273
-/home/mahmood/webserver/vandar/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:695
-/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookListTest.php:209
-/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookListTest.php:181</failure>
+/home/mahmood/webserver/vandar/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
+/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookListTest.php:179</failure>
         </testcase>
-        <testcase name="testPagination" class="Tests\Feature\BooksListTest" classname="Tests.Feature.BooksListTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookListTest.php" line="189" assertions="2" time="0.023943">
+        <testcase name="testPagination" class="Tests\Feature\BooksListTest" classname="Tests.Feature.BooksListTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookListTest.php" line="189" assertions="1" time="0.020229">
           <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BooksListTest::testPagination
-Unable to find JSON: 
-  
-  [{
-      "data": [
-          {
-              "id": 1,
-              "isbn": "9796255515291",
-              "title": "Reiciendis omnis sit eligendi non odit.",
-              "description": "Explicabo at quo in quasi et. Sunt qui in et rem. Possimus qui quia ullam provident ea sit sed vero. Repellat voluptatem voluptatem est aut totam.",
-              "authors": [],
-              "review": {
-                  "avg": 0,
-                  "count": 0
-              }
-          },
-          {
-              "id": 2,
-              "isbn": "9791131884072",
-              "title": "Unde similique quo sequi eligendi possimus.",
-              "description": "Laborum optio officia qui quod sint ad. Et dolor aliquam sint praesentium quia. Officiis tempore voluptatem assumenda facilis. Quaerat et et qui suscipit.",
-              "authors": [],
-              "review": {
-                  "avg": 0,
-                  "count": 0
-              }
-          },
-          {
-              "id": 3,
-              "isbn": "9794799908678",
-              "title": "Minus voluptas eligendi expedita minima aut.",
-              "description": "Aspernatur impedit provident rem est sint. Eaque sit consequatur nemo et magni eligendi deserunt. Id nobis dolor qui qui aut reprehenderit.",
-              "authors": [],
-              "review": {
-                  "avg": 0,
-                  "count": 0
-              }
-          },
-          {
-              "id": 4,
-              "isbn": "9781628336283",
-              "title": "Temporibus praesentium natus sint a assumenda qui.",
-              "description": "Quae et qui atque molestiae laboriosam. Voluptate ratione quas sit provident ea recusandae ratione voluptas. Qui tempora ullam est sit in quia veritatis. Dolor officiis nostrum quia ea perspiciatis.",
-              "authors": [],
-              "review": {
-                  "avg": 0,
-                  "count": 0
-              }
-          },
-          {
-              "id": 5,
-              "isbn": "9795736549909",
-              "title": "Sit cum nemo aspernatur assumenda sit exercitationem.",
-              "description": "Cupiditate dignissimos deserunt et eveniet. Nemo ipsa error repellat qui facere magnam corporis. Sunt temporibus quia nulla et enim ab quis. Temporibus et hic quia ab.",
-              "authors": [],
-              "review": {
-                  "avg": 0,
-                  "count": 0
-              }
-          },
-          {
-              "id": 6,
-              "isbn": "9784344503304",
-              "title": "Porro facere quidem cupiditate quos ut.",
-              "description": "Hic et non vel id corporis ex maiores. Expedita ut rem ipsa iusto voluptatem laudantium libero. Dolore cumque distinctio consequuntur.",
-              "authors": [],
-              "review": {
-                  "avg": 0,
-                  "count": 0
-              }
-          },
-          {
-              "id": 7,
-              "isbn": "9786690470026",
-              "title": "Dolor sint consequuntur illum quaerat est quasi.",
-              "description": "Architecto deserunt ab et praesentium est assumenda quo. Atque debitis deleniti expedita sed porro ab. Sequi mollitia facilis velit quo.",
-              "authors": [],
-              "review": {
-                  "avg": 0,
-                  "count": 0
-              }
-          },
-          {
-              "id": 8,
-              "isbn": "9790977511166",
-              "title": "Magnam modi quae vitae enim aut ipsa consequatur.",
-              "description": "Consequatur et dignissimos quae consectetur voluptatem maiores. Ullam alias consequatur accusantium libero dolor.",
-              "authors": [],
-              "review": {
-                  "avg": 0,
-                  "count": 0
-              }
-          },
-          {
-              "id": 9,
-              "isbn": "9781472794093",
-              "title": "Quos officia perspiciatis veritatis totam.",
-              "description": "Molestiae rerum quia quis porro. Quis nobis atque temporibus iusto dolorum molestias officiis. Minima velit veniam sed debitis maxime. Non et est qui.",
-              "authors": [],
-              "review": {
-                  "avg": 0,
-                  "count": 0
-              }
-          },
-          {
-              "id": 10,
-              "isbn": "9785516111174",
-              "title": "Aut ipsum ratione qui est et provident sint sunt.",
-              "description": "Cumque aliquam illo vitae asperiores aperiam. Error et omnis voluptatem voluptas sint. Consectetur in aliquid est architecto.",
-              "authors": [],
-              "review": {
-                  "avg": 0,
-                  "count": 0
-              }
-          },
-          {
-              "id": 11,
-              "isbn": "9784640988119",
-              "title": "Id perferendis sint voluptatem dolore perspiciatis laborum.",
-              "description": "Suscipit eum nihil sed neque alias earum. Est sed ducimus aliquid maiores est mollitia. Aut eum aut amet est excepturi. Est eligendi alias laboriosam ut.",
-              "authors": [],
-              "review": {
-                  "avg": 0,
-                  "count": 0
-              }
-          },
-          {
-              "id": 12,
-              "isbn": "9781223544458",
-              "title": "Velit omnis repellat illum quidem corrupti voluptas atque occaecati.",
-              "description": "Enim laborum enim alias possimus libero minus enim. Voluptatem facere et rerum voluptate culpa. Incidunt corrupti quas accusamus est quo.",
-              "authors": [],
-              "review": {
-                  "avg": 0,
-                  "count": 0
-              }
-          },
-          {
-              "id": 13,
-              "isbn": "9791477048626",
-              "title": "Eum soluta repellat quia.",
-              "description": "Culpa error facilis similique autem quae est. Ab odio laborum alias architecto numquam similique fugiat. Est et labore est quia.",
-              "authors": [],
-              "review": {
-                  "avg": 0,
-                  "count": 0
-              }
-          },
-          {
-              "id": 14,
-              "isbn": "9783968492902",
-              "title": "Possimus architecto libero incidunt neque.",
-              "description": "Iste voluptatem ut fuga in dolor. Omnis dolorem velit voluptatum doloribus quia placeat. Ducimus voluptas qui sunt laudantium et necessitatibus ut nesciunt.",
-              "authors": [],
-              "review": {
-                  "avg": 0,
-                  "count": 0
-              }
-          },
-          {
-              "id": 15,
-              "isbn": "9792142127998",
-              "title": "Possimus aliquam neque natus aut id velit ratione.",
-              "description": "Suscipit sunt nulla ab natus. Animi sunt facere fuga similique neque. Est aliquam voluptatum quos ut voluptates nisi optio.",
-              "authors": [],
-              "review": {
-                  "avg": 0,
-                  "count": 0
-              }
-          }
-      ]
-  }]
-  
-  within response JSON:
-  
-  [{
-      "data": [
-          {
-              "id": 1,
-              "isbn": "9796255515291",
-              "title": "Reiciendis omnis sit eligendi non odit.",
-              "description": "Explicabo at quo in quasi et. Sunt qui in et rem. Possimus qui quia ullam provident ea sit sed vero. Repellat voluptatem voluptatem est aut totam.",
-              "authors": [],
-              "review": {
-                  "avg": "",
-                  "count": ""
-              }
-          },
-          {
-              "id": 2,
-              "isbn": "9791131884072",
-              "title": "Unde similique quo sequi eligendi possimus.",
-              "description": "Laborum optio officia qui quod sint ad. Et dolor aliquam sint praesentium quia. Officiis tempore voluptatem assumenda facilis. Quaerat et et qui suscipit.",
-              "authors": [],
-              "review": {
-                  "avg": "",
-                  "count": ""
-              }
-          },
-          {
-              "id": 3,
-              "isbn": "9794799908678",
-              "title": "Minus voluptas eligendi expedita minima aut.",
-              "description": "Aspernatur impedit provident rem est sint. Eaque sit consequatur nemo et magni eligendi deserunt. Id nobis dolor qui qui aut reprehenderit.",
-              "authors": [],
-              "review": {
-                  "avg": "",
-                  "count": ""
-              }
-          },
-          {
-              "id": 4,
-              "isbn": "9781628336283",
-              "title": "Temporibus praesentium natus sint a assumenda qui.",
-              "description": "Quae et qui atque molestiae laboriosam. Voluptate ratione quas sit provident ea recusandae ratione voluptas. Qui tempora ullam est sit in quia veritatis. Dolor officiis nostrum quia ea perspiciatis.",
-              "authors": [],
-              "review": {
-                  "avg": "",
-                  "count": ""
-              }
-          },
-          {
-              "id": 5,
-              "isbn": "9795736549909",
-              "title": "Sit cum nemo aspernatur assumenda sit exercitationem.",
-              "description": "Cupiditate dignissimos deserunt et eveniet. Nemo ipsa error repellat qui facere magnam corporis. Sunt temporibus quia nulla et enim ab quis. Temporibus et hic quia ab.",
-              "authors": [],
-              "review": {
-                  "avg": "",
-                  "count": ""
-              }
-          },
-          {
-              "id": 6,
-              "isbn": "9784344503304",
-              "title": "Porro facere quidem cupiditate quos ut.",
-              "description": "Hic et non vel id corporis ex maiores. Expedita ut rem ipsa iusto voluptatem laudantium libero. Dolore cumque distinctio consequuntur.",
-              "authors": [],
-              "review": {
-                  "avg": "",
-                  "count": ""
-              }
-          },
-          {
-              "id": 7,
-              "isbn": "9786690470026",
-              "title": "Dolor sint consequuntur illum quaerat est quasi.",
-              "description": "Architecto deserunt ab et praesentium est assumenda quo. Atque debitis deleniti expedita sed porro ab. Sequi mollitia facilis velit quo.",
-              "authors": [],
-              "review": {
-                  "avg": "",
-                  "count": ""
-              }
-          },
-          {
-              "id": 8,
-              "isbn": "9790977511166",
-              "title": "Magnam modi quae vitae enim aut ipsa consequatur.",
-              "description": "Consequatur et dignissimos quae consectetur voluptatem maiores. Ullam alias consequatur accusantium libero dolor.",
-              "authors": [],
-              "review": {
-                  "avg": "",
-                  "count": ""
-              }
-          },
-          {
-              "id": 9,
-              "isbn": "9781472794093",
-              "title": "Quos officia perspiciatis veritatis totam.",
-              "description": "Molestiae rerum quia quis porro. Quis nobis atque temporibus iusto dolorum molestias officiis. Minima velit veniam sed debitis maxime. Non et est qui.",
-              "authors": [],
-              "review": {
-                  "avg": "",
-                  "count": ""
-              }
-          },
-          {
-              "id": 10,
-              "isbn": "9785516111174",
-              "title": "Aut ipsum ratione qui est et provident sint sunt.",
-              "description": "Cumque aliquam illo vitae asperiores aperiam. Error et omnis voluptatem voluptas sint. Consectetur in aliquid est architecto.",
-              "authors": [],
-              "review": {
-                  "avg": "",
-                  "count": ""
-              }
-          },
-          {
-              "id": 11,
-              "isbn": "9784640988119",
-              "title": "Id perferendis sint voluptatem dolore perspiciatis laborum.",
-              "description": "Suscipit eum nihil sed neque alias earum. Est sed ducimus aliquid maiores est mollitia. Aut eum aut amet est excepturi. Est eligendi alias laboriosam ut.",
-              "authors": [],
-              "review": {
-                  "avg": "",
-                  "count": ""
-              }
-          },
-          {
-              "id": 12,
-              "isbn": "9781223544458",
-              "title": "Velit omnis repellat illum quidem corrupti voluptas atque occaecati.",
-              "description": "Enim laborum enim alias possimus libero minus enim. Voluptatem facere et rerum voluptate culpa. Incidunt corrupti quas accusamus est quo.",
-              "authors": [],
-              "review": {
-                  "avg": "",
-                  "count": ""
-              }
-          },
-          {
-              "id": 13,
-              "isbn": "9791477048626",
-              "title": "Eum soluta repellat quia.",
-              "description": "Culpa error facilis similique autem quae est. Ab odio laborum alias architecto numquam similique fugiat. Est et labore est quia.",
-              "authors": [],
-              "review": {
-                  "avg": "",
-                  "count": ""
-              }
-          },
-          {
-              "id": 14,
-              "isbn": "9783968492902",
-              "title": "Possimus architecto libero incidunt neque.",
-              "description": "Iste voluptatem ut fuga in dolor. Omnis dolorem velit voluptatum doloribus quia placeat. Ducimus voluptas qui sunt laudantium et necessitatibus ut nesciunt.",
-              "authors": [],
-              "review": {
-                  "avg": "",
-                  "count": ""
-              }
-          },
-          {
-              "id": 15,
-              "isbn": "9792142127998",
-              "title": "Possimus aliquam neque natus aut id velit ratione.",
-              "description": "Suscipit sunt nulla ab natus. Animi sunt facere fuga similique neque. Est aliquam voluptatum quos ut voluptates nisi optio.",
-              "authors": [],
-              "review": {
-                  "avg": "",
-                  "count": ""
-              }
-          }
-      ],
-      "links": {
-          "first": "http://localhost/api/books?page=1",
-          "last": "http://localhost/api/books?page=2",
-          "prev": null,
-          "next": "http://localhost/api/books?page=2"
-      },
-      "meta": {
-          "current_page": 1,
-          "from": 1,
-          "last_page": 2,
-          "links": [
-              {
-                  "url": null,
-                  "label": "&amp;laquo; Previous",
-                  "active": false
-              },
-              {
-                  "url": "http://localhost/api/books?page=1",
-                  "label": "1",
-                  "active": true
-              },
-              {
-                  "url": "http://localhost/api/books?page=2",
-                  "label": "2",
-                  "active": false
-              },
-              {
-                  "url": "http://localhost/api/books?page=2",
-                  "label": "Next &amp;raquo;",
-                  "active": false
-              }
-          ],
-          "path": "http://localhost/api/books",
-          "per_page": 15,
-          "to": 15,
-          "total": 30
-      }
-  }].
-  
-  
-  Failed asserting that an array has the subset Array &amp;0 (
-      'data' =&gt; Array &amp;1 (
-          0 =&gt; Array &amp;2 (
-              'id' =&gt; 1
-              'isbn' =&gt; '9796255515291'
-              'title' =&gt; 'Reiciendis omnis sit eligendi non odit.'
-              'description' =&gt; 'Explicabo at quo in quasi et. Sunt qui in et rem. Possimus qui quia ullam provident ea sit sed vero. Repellat voluptatem voluptatem est aut totam.'
-              'authors' =&gt; Array &amp;3 ()
-              'review' =&gt; Array &amp;4 (
-                  'avg' =&gt; 0
-                  'count' =&gt; 0
-              )
-          )
-          1 =&gt; Array &amp;5 (
-              'id' =&gt; 2
-              'isbn' =&gt; '9791131884072'
-              'title' =&gt; 'Unde similique quo sequi eligendi possimus.'
-              'description' =&gt; 'Laborum optio officia qui quod sint ad. Et dolor aliquam sint praesentium quia. Officiis tempore voluptatem assumenda facilis. Quaerat et et qui suscipit.'
-              'authors' =&gt; Array &amp;6 ()
-              'review' =&gt; Array &amp;7 (
-                  'avg' =&gt; 0
-                  'count' =&gt; 0
-              )
-          )
-          2 =&gt; Array &amp;8 (
-              'id' =&gt; 3
-              'isbn' =&gt; '9794799908678'
-              'title' =&gt; 'Minus voluptas eligendi expedita minima aut.'
-              'description' =&gt; 'Aspernatur impedit provident rem est sint. Eaque sit consequatur nemo et magni eligendi deserunt. Id nobis dolor qui qui aut reprehenderit.'
-              'authors' =&gt; Array &amp;9 ()
-              'review' =&gt; Array &amp;10 (
-                  'avg' =&gt; 0
-                  'count' =&gt; 0
-              )
-          )
-          3 =&gt; Array &amp;11 (
-              'id' =&gt; 4
-              'isbn' =&gt; '9781628336283'
-              'title' =&gt; 'Temporibus praesentium natus sint a assumenda qui.'
-              'description' =&gt; 'Quae et qui atque molestiae laboriosam. Voluptate ratione quas sit provident ea recusandae ratione voluptas. Qui tempora ullam est sit in quia veritatis. Dolor officiis nostrum quia ea perspiciatis.'
-              'authors' =&gt; Array &amp;12 ()
-              'review' =&gt; Array &amp;13 (
-                  'avg' =&gt; 0
-                  'count' =&gt; 0
-              )
-          )
-          4 =&gt; Array &amp;14 (
-              'id' =&gt; 5
-              'isbn' =&gt; '9795736549909'
-              'title' =&gt; 'Sit cum nemo aspernatur assumenda sit exercitationem.'
-              'description' =&gt; 'Cupiditate dignissimos deserunt et eveniet. Nemo ipsa error repellat qui facere magnam corporis. Sunt temporibus quia nulla et enim ab quis. Temporibus et hic quia ab.'
-              'authors' =&gt; Array &amp;15 ()
-              'review' =&gt; Array &amp;16 (
-                  'avg' =&gt; 0
-                  'count' =&gt; 0
-              )
-          )
-          5 =&gt; Array &amp;17 (
-              'id' =&gt; 6
-              'isbn' =&gt; '9784344503304'
-              'title' =&gt; 'Porro facere quidem cupiditate quos ut.'
-              'description' =&gt; 'Hic et non vel id corporis ex maiores. Expedita ut rem ipsa iusto voluptatem laudantium libero. Dolore cumque distinctio consequuntur.'
-              'authors' =&gt; Array &amp;18 ()
-              'review' =&gt; Array &amp;19 (
-                  'avg' =&gt; 0
-                  'count' =&gt; 0
-              )
-          )
-          6 =&gt; Array &amp;20 (
-              'id' =&gt; 7
-              'isbn' =&gt; '9786690470026'
-              'title' =&gt; 'Dolor sint consequuntur illum quaerat est quasi.'
-              'description' =&gt; 'Architecto deserunt ab et praesentium est assumenda quo. Atque debitis deleniti expedita sed porro ab. Sequi mollitia facilis velit quo.'
-              'authors' =&gt; Array &amp;21 ()
-              'review' =&gt; Array &amp;22 (
-                  'avg' =&gt; 0
-                  'count' =&gt; 0
-              )
-          )
-          7 =&gt; Array &amp;23 (
-              'id' =&gt; 8
-              'isbn' =&gt; '9790977511166'
-              'title' =&gt; 'Magnam modi quae vitae enim aut ipsa consequatur.'
-              'description' =&gt; 'Consequatur et dignissimos quae consectetur voluptatem maiores. Ullam alias consequatur accusantium libero dolor.'
-              'authors' =&gt; Array &amp;24 ()
-              'review' =&gt; Array &amp;25 (
-                  'avg' =&gt; 0
-                  'count' =&gt; 0
-              )
-          )
-          8 =&gt; Array &amp;26 (
-              'id' =&gt; 9
-              'isbn' =&gt; '9781472794093'
-              'title' =&gt; 'Quos officia perspiciatis veritatis totam.'
-              'description' =&gt; 'Molestiae rerum quia quis porro. Quis nobis atque temporibus iusto dolorum molestias officiis. Minima velit veniam sed debitis maxime. Non et est qui.'
-              'authors' =&gt; Array &amp;27 ()
-              'review' =&gt; Array &amp;28 (
-                  'avg' =&gt; 0
-                  'count' =&gt; 0
-              )
-          )
-          9 =&gt; Array &amp;29 (
-              'id' =&gt; 10
-              'isbn' =&gt; '9785516111174'
-              'title' =&gt; 'Aut ipsum ratione qui est et provident sint sunt.'
-              'description' =&gt; 'Cumque aliquam illo vitae asperiores aperiam. Error et omnis voluptatem voluptas sint. Consectetur in aliquid est architecto.'
-              'authors' =&gt; Array &amp;30 ()
-              'review' =&gt; Array &amp;31 (
-                  'avg' =&gt; 0
-                  'count' =&gt; 0
-              )
-          )
-          10 =&gt; Array &amp;32 (
-              'id' =&gt; 11
-              'isbn' =&gt; '9784640988119'
-              'title' =&gt; 'Id perferendis sint voluptatem dolore perspiciatis laborum.'
-              'description' =&gt; 'Suscipit eum nihil sed neque alias earum. Est sed ducimus aliquid maiores est mollitia. Aut eum aut amet est excepturi. Est eligendi alias laboriosam ut.'
-              'authors' =&gt; Array &amp;33 ()
-              'review' =&gt; Array &amp;34 (
-                  'avg' =&gt; 0
-                  'count' =&gt; 0
-              )
-          )
-          11 =&gt; Array &amp;35 (
-              'id' =&gt; 12
-              'isbn' =&gt; '9781223544458'
-              'title' =&gt; 'Velit omnis repellat illum quidem corrupti voluptas atque occaecati.'
-              'description' =&gt; 'Enim laborum enim alias possimus libero minus enim. Voluptatem facere et rerum voluptate culpa. Incidunt corrupti quas accusamus est quo.'
-              'authors' =&gt; Array &amp;36 ()
-              'review' =&gt; Array &amp;37 (
-                  'avg' =&gt; 0
-                  'count' =&gt; 0
-              )
-          )
-          12 =&gt; Array &amp;38 (
-              'id' =&gt; 13
-              'isbn' =&gt; '9791477048626'
-              'title' =&gt; 'Eum soluta repellat quia.'
-              'description' =&gt; 'Culpa error facilis similique autem quae est. Ab odio laborum alias architecto numquam similique fugiat. Est et labore est quia.'
-              'authors' =&gt; Array &amp;39 ()
-              'review' =&gt; Array &amp;40 (
-                  'avg' =&gt; 0
-                  'count' =&gt; 0
-              )
-          )
-          13 =&gt; Array &amp;41 (
-              'id' =&gt; 14
-              'isbn' =&gt; '9783968492902'
-              'title' =&gt; 'Possimus architecto libero incidunt neque.'
-              'description' =&gt; 'Iste voluptatem ut fuga in dolor. Omnis dolorem velit voluptatum doloribus quia placeat. Ducimus voluptas qui sunt laudantium et necessitatibus ut nesciunt.'
-              'authors' =&gt; Array &amp;42 ()
-              'review' =&gt; Array &amp;43 (
-                  'avg' =&gt; 0
-                  'count' =&gt; 0
-              )
-          )
-          14 =&gt; Array &amp;44 (
-              'id' =&gt; 15
-              'isbn' =&gt; '9792142127998'
-              'title' =&gt; 'Possimus aliquam neque natus aut id velit ratione.'
-              'description' =&gt; 'Suscipit sunt nulla ab natus. Animi sunt facere fuga similique neque. Est aliquam voluptatum quos ut voluptates nisi optio.'
-              'authors' =&gt; Array &amp;45 ()
-              'review' =&gt; Array &amp;46 (
-                  'avg' =&gt; 0
-                  'count' =&gt; 0
-              )
-          )
-      )
-  ).
---- Expected
-+++ Actual
-@@ @@
-       ),
-       'review' =&gt; 
-       array (
--        'avg' =&gt; 0,
--        'count' =&gt; 0,
-+        'avg' =&gt; '',
-+        'count' =&gt; '',
-       ),
-     ),
-     1 =&gt; 
-@@ @@
-       ),
-       'review' =&gt; 
-       array (
--        'avg' =&gt; 0,
--        'count' =&gt; 0,
-+        'avg' =&gt; '',
-+        'count' =&gt; '',
-       ),
-     ),
-     2 =&gt; 
-@@ @@
-       ),
-       'review' =&gt; 
-       array (
--        'avg' =&gt; 0,
--        'count' =&gt; 0,
-+        'avg' =&gt; '',
-+        'count' =&gt; '',
-       ),
-     ),
-     3 =&gt; 
-@@ @@
-       ),
-       'review' =&gt; 
-       array (
--        'avg' =&gt; 0,
--        'count' =&gt; 0,
-+        'avg' =&gt; '',
-+        'count' =&gt; '',
-       ),
-     ),
-     4 =&gt; 
-@@ @@
-       ),
-       'review' =&gt; 
-       array (
--        'avg' =&gt; 0,
--        'count' =&gt; 0,
-+        'avg' =&gt; '',
-+        'count' =&gt; '',
-       ),
-     ),
-     5 =&gt; 
-@@ @@
-       ),
-       'review' =&gt; 
-       array (
--        'avg' =&gt; 0,
--        'count' =&gt; 0,
-+        'avg' =&gt; '',
-+        'count' =&gt; '',
-       ),
-     ),
-     6 =&gt; 
-@@ @@
-       ),
-       'review' =&gt; 
-       array (
--        'avg' =&gt; 0,
--        'count' =&gt; 0,
-+        'avg' =&gt; '',
-+        'count' =&gt; '',
-       ),
-     ),
-     7 =&gt; 
-@@ @@
-       ),
-       'review' =&gt; 
-       array (
--        'avg' =&gt; 0,
--        'count' =&gt; 0,
-+        'avg' =&gt; '',
-+        'count' =&gt; '',
-       ),
-     ),
-     8 =&gt; 
-@@ @@
-       ),
-       'review' =&gt; 
-       array (
--        'avg' =&gt; 0,
--        'count' =&gt; 0,
-+        'avg' =&gt; '',
-+        'count' =&gt; '',
-       ),
-     ),
-     9 =&gt; 
-@@ @@
-       ),
-       'review' =&gt; 
-       array (
--        'avg' =&gt; 0,
--        'count' =&gt; 0,
-+        'avg' =&gt; '',
-+        'count' =&gt; '',
-       ),
-     ),
-     10 =&gt; 
-@@ @@
-       ),
-       'review' =&gt; 
-       array (
--        'avg' =&gt; 0,
--        'count' =&gt; 0,
-+        'avg' =&gt; '',
-+        'count' =&gt; '',
-       ),
-     ),
-     11 =&gt; 
-@@ @@
-       ),
-       'review' =&gt; 
-       array (
--        'avg' =&gt; 0,
--        'count' =&gt; 0,
-+        'avg' =&gt; '',
-+        'count' =&gt; '',
-       ),
-     ),
-     12 =&gt; 
-@@ @@
-       ),
-       'review' =&gt; 
-       array (
--        'avg' =&gt; 0,
--        'count' =&gt; 0,
-+        'avg' =&gt; '',
-+        'count' =&gt; '',
-       ),
-     ),
-     13 =&gt; 
-@@ @@
-       ),
-       'review' =&gt; 
-       array (
--        'avg' =&gt; 0,
--        'count' =&gt; 0,
-+        'avg' =&gt; '',
-+        'count' =&gt; '',
-       ),
-     ),
-     14 =&gt; 
-@@ @@
-       ),
-       'review' =&gt; 
-       array (
--        'avg' =&gt; 0,
--        'count' =&gt; 0,
-+        'avg' =&gt; '',
-+        'count' =&gt; '',
-       ),
-     ),
-   ),
+Expected response status code [200] but received 500.
+Failed asserting that 200 is identical to 500.
 
-/home/mahmood/webserver/vandar/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/Constraints/ArraySubset.php:85
-/home/mahmood/webserver/vandar/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/Assert.php:40
-/home/mahmood/webserver/vandar/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/AssertableJsonString.php:273
-/home/mahmood/webserver/vandar/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:695
-/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookListTest.php:209
-/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookListTest.php:198</failure>
+/home/mahmood/webserver/vandar/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
+/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookListTest.php:196</failure>
         </testcase>
       </testsuite>
-      <testsuite name="Tests\Feature\BookPostTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookPostTest.php" tests="24" assertions="24" errors="0" warnings="0" failures="24" skipped="0" time="0.282970">
-        <testcase name="testDenyGuestAccess" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookPostTest.php" line="13" assertions="1" time="0.014570">
+      <testsuite name="Tests\Feature\BookPostTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookPostTest.php" tests="24" assertions="24" errors="0" warnings="0" failures="24" skipped="0" time="0.306515">
+        <testcase name="testDenyGuestAccess" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookPostTest.php" line="13" assertions="1" time="0.016123">
           <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookPostTest::testDenyGuestAccess
 Expected response status code [401] but received 200.
-  Failed asserting that 401 is identical to 200.
+Failed asserting that 401 is identical to 200.
 
 /home/mahmood/webserver/vandar/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
 /home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookPostTest.php:24</failure>
         </testcase>
-        <testcase name="testDenyNonAdminUserAccess" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookPostTest.php" line="27" assertions="1" time="0.012429">
+        <testcase name="testDenyNonAdminUserAccess" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookPostTest.php" line="27" assertions="1" time="0.015313">
           <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookPostTest::testDenyNonAdminUserAccess
 Expected response status code [403] but received 200.
-  Failed asserting that 403 is identical to 200.
+Failed asserting that 403 is identical to 200.
 
 /home/mahmood/webserver/vandar/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
 /home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookPostTest.php:41</failure>
         </testcase>
-        <testcase name="testSuccessfulPost" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookPostTest.php" line="44" assertions="1" time="0.015109">
+        <testcase name="testSuccessfulPost" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookPostTest.php" line="44" assertions="1" time="0.012182">
           <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookPostTest::testSuccessfulPost
 Expected response status code [201] but received 200.
-  Failed asserting that 201 is identical to 200.
+Failed asserting that 201 is identical to 200.
 
 /home/mahmood/webserver/vandar/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
 /home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookPostTest.php:58</failure>
         </testcase>
-        <testsuite name="Tests\Feature\BookPostTest::testValidation" tests="21" assertions="21" errors="0" warnings="0" failures="21" skipped="0" time="0.240863">
-          <testcase name="testValidation with data set #0" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookPostTest.php" line="72" assertions="1" time="0.011731">
+        <testsuite name="Tests\Feature\BookPostTest::testValidation" tests="21" assertions="21" errors="0" warnings="0" failures="21" skipped="0" time="0.262897">
+          <testcase name="testValidation with data set #0" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookPostTest.php" line="72" assertions="1" time="0.012260">
             <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookPostTest::testValidation with data set #0 (array(null), 'isbn')
 Expected response status code [422] but received 200.
-  Failed asserting that 422 is identical to 200.
+Failed asserting that 422 is identical to 200.
 
 /home/mahmood/webserver/vandar/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
 /home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookPostTest.php:91</failure>
           </testcase>
-          <testcase name="testValidation with data set #1" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookPostTest.php" line="72" assertions="1" time="0.011347">
+          <testcase name="testValidation with data set #1" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookPostTest.php" line="72" assertions="1" time="0.011451">
             <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookPostTest::testValidation with data set #1 (array(''), 'isbn')
 Expected response status code [422] but received 200.
-  Failed asserting that 422 is identical to 200.
+Failed asserting that 422 is identical to 200.
 
 /home/mahmood/webserver/vandar/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
 /home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookPostTest.php:91</failure>
           </testcase>
-          <testcase name="testValidation with data set #2" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookPostTest.php" line="72" assertions="1" time="0.011477">
+          <testcase name="testValidation with data set #2" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookPostTest.php" line="72" assertions="1" time="0.013303">
             <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookPostTest::testValidation with data set #2 (array('97883283023414'), 'isbn')
 Expected response status code [422] but received 200.
-  Failed asserting that 422 is identical to 200.
+Failed asserting that 422 is identical to 200.
 
 /home/mahmood/webserver/vandar/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
 /home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookPostTest.php:91</failure>
           </testcase>
-          <testcase name="testValidation with data set #3" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookPostTest.php" line="72" assertions="1" time="0.011050">
+          <testcase name="testValidation with data set #3" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookPostTest.php" line="72" assertions="1" time="0.011854">
             <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookPostTest::testValidation with data set #3 (array('978832830'), 'isbn')
 Expected response status code [422] but received 200.
-  Failed asserting that 422 is identical to 200.
+Failed asserting that 422 is identical to 200.
 
 /home/mahmood/webserver/vandar/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
 /home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookPostTest.php:91</failure>
           </testcase>
-          <testcase name="testValidation with data set #4" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookPostTest.php" line="72" assertions="1" time="0.011221">
+          <testcase name="testValidation with data set #4" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookPostTest.php" line="72" assertions="1" time="0.012748">
             <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookPostTest::testValidation with data set #4 (array('97883283023422'), 'isbn')
 Expected response status code [422] but received 200.
-  Failed asserting that 422 is identical to 200.
+Failed asserting that 422 is identical to 200.
 
 /home/mahmood/webserver/vandar/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
 /home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookPostTest.php:91</failure>
           </testcase>
-          <testcase name="testValidation with data set #5" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookPostTest.php" line="72" assertions="1" time="0.010981">
+          <testcase name="testValidation with data set #5" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookPostTest.php" line="72" assertions="1" time="0.013148">
             <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookPostTest::testValidation with data set #5 (array(array()), 'isbn')
 Expected response status code [422] but received 200.
-  Failed asserting that 422 is identical to 200.
+Failed asserting that 422 is identical to 200.
 
 /home/mahmood/webserver/vandar/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
 /home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookPostTest.php:91</failure>
           </testcase>
-          <testcase name="testValidation with data set #6" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookPostTest.php" line="72" assertions="1" time="0.011272">
+          <testcase name="testValidation with data set #6" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookPostTest.php" line="72" assertions="1" time="0.011325">
             <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookPostTest::testValidation with data set #6 (array(array(673890)), 'isbn')
 Expected response status code [422] but received 200.
-  Failed asserting that 422 is identical to 200.
+Failed asserting that 422 is identical to 200.
 
 /home/mahmood/webserver/vandar/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
 /home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookPostTest.php:91</failure>
           </testcase>
-          <testcase name="testValidation with data set #7" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookPostTest.php" line="72" assertions="1" time="0.011402">
+          <testcase name="testValidation with data set #7" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookPostTest.php" line="72" assertions="1" time="0.012986">
             <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookPostTest::testValidation with data set #7 (array(array('978832830234')), 'isbn')
 Expected response status code [422] but received 200.
-  Failed asserting that 422 is identical to 200.
+Failed asserting that 422 is identical to 200.
 
 /home/mahmood/webserver/vandar/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
 /home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookPostTest.php:91</failure>
           </testcase>
-          <testcase name="testValidation with data set #8" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookPostTest.php" line="72" assertions="1" time="0.012945">
+          <testcase name="testValidation with data set #8" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookPostTest.php" line="72" assertions="1" time="0.013174">
             <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookPostTest::testValidation with data set #8 (array('FCKGWRHQQ2'), 'isbn')
 Expected response status code [422] but received 200.
-  Failed asserting that 422 is identical to 200.
+Failed asserting that 422 is identical to 200.
 
 /home/mahmood/webserver/vandar/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
 /home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookPostTest.php:91</failure>
           </testcase>
-          <testcase name="testValidation with data set #9" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookPostTest.php" line="72" assertions="1" time="0.011690">
+          <testcase name="testValidation with data set #9" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookPostTest.php" line="72" assertions="1" time="0.011343">
             <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookPostTest::testValidation with data set #9 (array(null), 'title')
 Expected response status code [422] but received 200.
-  Failed asserting that 422 is identical to 200.
+Failed asserting that 422 is identical to 200.
 
 /home/mahmood/webserver/vandar/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
 /home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookPostTest.php:91</failure>
           </testcase>
-          <testcase name="testValidation with data set #10" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookPostTest.php" line="72" assertions="1" time="0.011441">
+          <testcase name="testValidation with data set #10" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookPostTest.php" line="72" assertions="1" time="0.013209">
             <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookPostTest::testValidation with data set #10 (array(''), 'title')
 Expected response status code [422] but received 200.
-  Failed asserting that 422 is identical to 200.
+Failed asserting that 422 is identical to 200.
 
 /home/mahmood/webserver/vandar/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
 /home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookPostTest.php:91</failure>
           </testcase>
-          <testcase name="testValidation with data set #11" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookPostTest.php" line="72" assertions="1" time="0.011517">
+          <testcase name="testValidation with data set #11" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookPostTest.php" line="72" assertions="1" time="0.013233">
             <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookPostTest::testValidation with data set #11 (array(array()), 'title')
 Expected response status code [422] but received 200.
-  Failed asserting that 422 is identical to 200.
+Failed asserting that 422 is identical to 200.
 
 /home/mahmood/webserver/vandar/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
 /home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookPostTest.php:91</failure>
           </testcase>
-          <testcase name="testValidation with data set #12" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookPostTest.php" line="72" assertions="1" time="0.011427">
+          <testcase name="testValidation with data set #12" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookPostTest.php" line="72" assertions="1" time="0.011486">
             <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookPostTest::testValidation with data set #12 (array(null), 'description')
 Expected response status code [422] but received 200.
-  Failed asserting that 422 is identical to 200.
+Failed asserting that 422 is identical to 200.
 
 /home/mahmood/webserver/vandar/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
 /home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookPostTest.php:91</failure>
           </testcase>
-          <testcase name="testValidation with data set #13" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookPostTest.php" line="72" assertions="1" time="0.011449">
+          <testcase name="testValidation with data set #13" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookPostTest.php" line="72" assertions="1" time="0.013641">
             <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookPostTest::testValidation with data set #13 (array(''), 'description')
 Expected response status code [422] but received 200.
-  Failed asserting that 422 is identical to 200.
+Failed asserting that 422 is identical to 200.
 
 /home/mahmood/webserver/vandar/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
 /home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookPostTest.php:91</failure>
           </testcase>
-          <testcase name="testValidation with data set #14" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookPostTest.php" line="72" assertions="1" time="0.011513">
+          <testcase name="testValidation with data set #14" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookPostTest.php" line="72" assertions="1" time="0.012945">
             <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookPostTest::testValidation with data set #14 (array(array()), 'description')
 Expected response status code [422] but received 200.
-  Failed asserting that 422 is identical to 200.
+Failed asserting that 422 is identical to 200.
 
 /home/mahmood/webserver/vandar/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
 /home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookPostTest.php:91</failure>
           </testcase>
-          <testcase name="testValidation with data set #15" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookPostTest.php" line="72" assertions="1" time="0.011398">
+          <testcase name="testValidation with data set #15" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookPostTest.php" line="72" assertions="1" time="0.011547">
             <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookPostTest::testValidation with data set #15 (array(null), 'authors')
 Expected response status code [422] but received 200.
-  Failed asserting that 422 is identical to 200.
+Failed asserting that 422 is identical to 200.
 
 /home/mahmood/webserver/vandar/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
 /home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookPostTest.php:91</failure>
           </testcase>
-          <testcase name="testValidation with data set #16" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookPostTest.php" line="72" assertions="1" time="0.011416">
+          <testcase name="testValidation with data set #16" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookPostTest.php" line="72" assertions="1" time="0.013209">
             <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookPostTest::testValidation with data set #16 (array(array()), 'authors')
 Expected response status code [422] but received 200.
-  Failed asserting that 422 is identical to 200.
+Failed asserting that 422 is identical to 200.
 
 /home/mahmood/webserver/vandar/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
 /home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookPostTest.php:91</failure>
           </testcase>
-          <testcase name="testValidation with data set #17" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookPostTest.php" line="72" assertions="1" time="0.011388">
+          <testcase name="testValidation with data set #17" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookPostTest.php" line="72" assertions="1" time="0.011852">
             <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookPostTest::testValidation with data set #17 (array(''), 'authors')
 Expected response status code [422] but received 200.
-  Failed asserting that 422 is identical to 200.
+Failed asserting that 422 is identical to 200.
 
 /home/mahmood/webserver/vandar/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
 /home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookPostTest.php:91</failure>
           </testcase>
-          <testcase name="testValidation with data set #18" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookPostTest.php" line="72" assertions="1" time="0.011329">
+          <testcase name="testValidation with data set #18" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookPostTest.php" line="72" assertions="1" time="0.012445">
             <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookPostTest::testValidation with data set #18 (array(array(999999)), 'authors.0')
 Expected response status code [422] but received 200.
-  Failed asserting that 422 is identical to 200.
+Failed asserting that 422 is identical to 200.
 
 /home/mahmood/webserver/vandar/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
 /home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookPostTest.php:91</failure>
           </testcase>
-          <testcase name="testValidation with data set #19" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookPostTest.php" line="72" assertions="1" time="0.011543">
+          <testcase name="testValidation with data set #19" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookPostTest.php" line="72" assertions="1" time="0.014044">
             <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookPostTest::testValidation with data set #19 (array(array(array())), 'authors.0')
 Expected response status code [422] but received 200.
-  Failed asserting that 422 is identical to 200.
+Failed asserting that 422 is identical to 200.
 
 /home/mahmood/webserver/vandar/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
 /home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookPostTest.php:91</failure>
           </testcase>
-          <testcase name="testValidation with data set #20" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookPostTest.php" line="72" assertions="1" time="0.011325">
+          <testcase name="testValidation with data set #20" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookPostTest.php" line="72" assertions="1" time="0.011696">
             <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookPostTest::testValidation with data set #20 (array(array(null)), 'authors.0')
 Expected response status code [422] but received 200.
-  Failed asserting that 422 is identical to 200.
+Failed asserting that 422 is identical to 200.
 
 /home/mahmood/webserver/vandar/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
 /home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookPostTest.php:91</failure>
           </testcase>
         </testsuite>
       </testsuite>
-      <testsuite name="Tests\Feature\BookReviewTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookReviewTest.php" tests="11" assertions="11" errors="0" warnings="0" failures="11" skipped="0" time="0.130045">
-        <testcase name="testDenyGuestAccess" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookReviewTest.php" line="14" assertions="1" time="0.011165">
+      <testsuite name="Tests\Feature\BookReviewTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookReviewTest.php" tests="11" assertions="11" errors="0" warnings="0" failures="11" skipped="0" time="0.141842">
+        <testcase name="testDenyGuestAccess" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookReviewTest.php" line="14" assertions="1" time="0.012214">
           <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookReviewTest::testDenyGuestAccess
 Expected response status code [401] but received 200.
-  Failed asserting that 401 is identical to 200.
+Failed asserting that 401 is identical to 200.
 
 /home/mahmood/webserver/vandar/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
 /home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookReviewTest.php:23</failure>
         </testcase>
-        <testcase name="testSuccessfulPost" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookReviewTest.php" line="26" assertions="1" time="0.011011">
+        <testcase name="testSuccessfulPost" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookReviewTest.php" line="26" assertions="1" time="0.013292">
           <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookReviewTest::testSuccessfulPost
 Expected response status code [201] but received 200.
-  Failed asserting that 201 is identical to 200.
+Failed asserting that 201 is identical to 200.
 
 /home/mahmood/webserver/vandar/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
 /home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookReviewTest.php:38</failure>
         </testcase>
-        <testsuite name="Tests\Feature\BookReviewTest::testValidation" tests="9" assertions="9" errors="0" warnings="0" failures="9" skipped="0" time="0.107869">
-          <testcase name="testValidation with data set #0" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookReviewTest.php" line="64" assertions="1" time="0.019632">
+        <testsuite name="Tests\Feature\BookReviewTest::testValidation" tests="9" assertions="9" errors="0" warnings="0" failures="9" skipped="0" time="0.116336">
+          <testcase name="testValidation with data set #0" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookReviewTest.php" line="64" assertions="1" time="0.021781">
             <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookReviewTest::testValidation with data set #0 (array(null), 'review')
 Expected response status code [422] but received 200.
-  Failed asserting that 422 is identical to 200.
+Failed asserting that 422 is identical to 200.
 
 /home/mahmood/webserver/vandar/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
 /home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookReviewTest.php:79</failure>
           </testcase>
-          <testcase name="testValidation with data set #1" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookReviewTest.php" line="64" assertions="1" time="0.010950">
+          <testcase name="testValidation with data set #1" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookReviewTest.php" line="64" assertions="1" time="0.011094">
             <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookReviewTest::testValidation with data set #1 (array(''), 'review')
 Expected response status code [422] but received 200.
-  Failed asserting that 422 is identical to 200.
+Failed asserting that 422 is identical to 200.
 
 /home/mahmood/webserver/vandar/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
 /home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookReviewTest.php:79</failure>
           </testcase>
-          <testcase name="testValidation with data set #2" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookReviewTest.php" line="64" assertions="1" time="0.011785">
+          <testcase name="testValidation with data set #2" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookReviewTest.php" line="64" assertions="1" time="0.012543">
             <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookReviewTest::testValidation with data set #2 (array(0), 'review')
 Expected response status code [422] but received 200.
-  Failed asserting that 422 is identical to 200.
+Failed asserting that 422 is identical to 200.
 
 /home/mahmood/webserver/vandar/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
 /home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookReviewTest.php:79</failure>
           </testcase>
-          <testcase name="testValidation with data set #3" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookReviewTest.php" line="64" assertions="1" time="0.011608">
+          <testcase name="testValidation with data set #3" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookReviewTest.php" line="64" assertions="1" time="0.012238">
             <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookReviewTest::testValidation with data set #3 (array(11), 'review')
 Expected response status code [422] but received 200.
-  Failed asserting that 422 is identical to 200.
+Failed asserting that 422 is identical to 200.
 
 /home/mahmood/webserver/vandar/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
 /home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookReviewTest.php:79</failure>
           </testcase>
-          <testcase name="testValidation with data set #4" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookReviewTest.php" line="64" assertions="1" time="0.010870">
+          <testcase name="testValidation with data set #4" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookReviewTest.php" line="64" assertions="1" time="0.010843">
             <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookReviewTest::testValidation with data set #4 (array(3.5), 'review')
 Expected response status code [422] but received 200.
-  Failed asserting that 422 is identical to 200.
+Failed asserting that 422 is identical to 200.
 
 /home/mahmood/webserver/vandar/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
 /home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookReviewTest.php:79</failure>
           </testcase>
-          <testcase name="testValidation with data set #5" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookReviewTest.php" line="64" assertions="1" time="0.010722">
+          <testcase name="testValidation with data set #5" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookReviewTest.php" line="64" assertions="1" time="0.012357">
             <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookReviewTest::testValidation with data set #5 (array(array()), 'review')
 Expected response status code [422] but received 200.
-  Failed asserting that 422 is identical to 200.
+Failed asserting that 422 is identical to 200.
 
 /home/mahmood/webserver/vandar/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
 /home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookReviewTest.php:79</failure>
           </testcase>
-          <testcase name="testValidation with data set #6" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookReviewTest.php" line="64" assertions="1" time="0.010734">
+          <testcase name="testValidation with data set #6" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookReviewTest.php" line="64" assertions="1" time="0.010902">
             <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookReviewTest::testValidation with data set #6 (array(null), 'comment')
 Expected response status code [422] but received 200.
-  Failed asserting that 422 is identical to 200.
+Failed asserting that 422 is identical to 200.
 
 /home/mahmood/webserver/vandar/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
 /home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookReviewTest.php:79</failure>
           </testcase>
-          <testcase name="testValidation with data set #7" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookReviewTest.php" line="64" assertions="1" time="0.010677">
+          <testcase name="testValidation with data set #7" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookReviewTest.php" line="64" assertions="1" time="0.012130">
             <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookReviewTest::testValidation with data set #7 (array(''), 'comment')
 Expected response status code [422] but received 200.
-  Failed asserting that 422 is identical to 200.
+Failed asserting that 422 is identical to 200.
 
 /home/mahmood/webserver/vandar/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
 /home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookReviewTest.php:79</failure>
           </testcase>
-          <testcase name="testValidation with data set #8" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookReviewTest.php" line="64" assertions="1" time="0.010893">
+          <testcase name="testValidation with data set #8" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookReviewTest.php" line="64" assertions="1" time="0.012449">
             <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookReviewTest::testValidation with data set #8 (array(array()), 'comment')
 Expected response status code [422] but received 200.
-  Failed asserting that 422 is identical to 200.
+Failed asserting that 422 is identical to 200.
 
 /home/mahmood/webserver/vandar/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
 /home/mahmood/webserver/vandar/tasks/a/example-app/tests/Feature/BookReviewTest.php:79</failure>

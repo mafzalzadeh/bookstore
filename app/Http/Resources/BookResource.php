@@ -24,11 +24,11 @@ class BookResource extends JsonResource
             'isbn' => $this->isbn,
             'title' => $this->title,
             'description' => $this->description,
-            'authors' => [],
+            'authors' => AuthorResource::collection($this->authors),
             'review'=>
                 [
-                    'avg' => '',
-                    'count' => '',
+                    'avg' => round($this->reviews->avg('review')),
+                    'count' => $this->reviews->count(),
                 ],
         ];
     }
