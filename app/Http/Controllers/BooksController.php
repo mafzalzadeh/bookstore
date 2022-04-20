@@ -18,7 +18,7 @@ class BooksController extends Controller
 {
     public function getCollection(Request $request)
     {
-        //@todo code here
+       return BookResource::collection(Book::paginate());
     }
 
     public function post(PostBookRequest $request)
