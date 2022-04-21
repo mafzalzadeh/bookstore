@@ -22,6 +22,15 @@ class BooksController extends Controller
 
         $this->searchTitle($request, $books);
 
+        if ($request->filled('authors')) {
+            $authors = explode(',', $request['authors']);
+
+            $books->whereHas('authors', function ($query) use ($authors){
+                $query->whereIn('author_id', $authors );
+            });
+;
+        }
+
         return BookResource::collection($books->paginate());
     }
 
