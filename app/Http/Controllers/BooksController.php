@@ -19,11 +19,10 @@ class BooksController extends Controller
     public function getCollection(Request $request)
     {
         $books = Book::query();
-        if ($request->filled('title')){
-            $books->where('title','like','%'.$request['title'].'%');
-        }
 
-       return BookResource::collection($books->paginate());
+        $this->searchTitle($request, $books);
+
+        return BookResource::collection($books->paginate());
     }
 
     public function post(PostBookRequest $request)
@@ -34,5 +33,16 @@ class BooksController extends Controller
     public function postReview(Book $book, PostBookReviewRequest $request)
     {
         //@todo code here
+    }
+
+    /**
+     * @param Request $request
+     * @param \Illuminate\Database\Eloquent\Builder $books
+     */
+    protected function searchTitle(Request $request, \Illuminate\Database\Eloquent\Builder $books): void
+    {
+        if ($request->filled('title')) {
+            $books->searchTitle($request['title']);
+        }
     }
 }
