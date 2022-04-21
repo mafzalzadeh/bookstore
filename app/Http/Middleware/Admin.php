@@ -16,7 +16,9 @@ class Admin
      */
     public function handle($request, Closure $next)
     {
-        // @TODO implement
+        if(! Auth::user()->is_admin){
+            return response()->json([], 403);
+        }
 
         return $next($request);
     }
