@@ -45,7 +45,16 @@ class BooksController extends Controller
 
     public function postReview(Book $book, PostBookReviewRequest $request)
     {
-        //@todo code here
+        $bookReview = new BookReview();
+        $bookReview->review = $request['review'];
+        $bookReview->comment = $request['comment'];
+
+        $bookReview->user_id = Auth::id();
+        $bookReview->book_id = $book->id;
+
+        $bookReview->save();;
+
+        return new BookReviewResource($bookReview);
     }
 
     /**
