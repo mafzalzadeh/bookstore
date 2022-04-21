@@ -18,7 +18,12 @@ class BooksController extends Controller
 {
     public function getCollection(Request $request)
     {
-       return BookResource::collection(Book::paginate());
+        $books = Book::query();
+        if ($request->filled('title')){
+            $books->where('title','like','%'.$request['title'].'%');
+        }
+
+       return BookResource::collection($books->paginate());
     }
 
     public function post(PostBookRequest $request)
