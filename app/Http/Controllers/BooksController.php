@@ -26,11 +26,18 @@ class BooksController extends Controller
 
         if (isset($request['sortColumn'])) {
 
-            $sortDirection = ( isset($request['sortDirection'] ) && strtoupper( $request['sortDirection'] ) == 'DESC' ) ? 'DESC': 'asc';
-            if ($request['sortColumn'] == 'title'){
-                $books->OrderBy( $request['sortColumn'], $sortDirection );
-            }
 
+            $sortDirection = (isset($request['sortDirection']) && strtoupper($request['sortDirection']) == 'DESC') ? 'DESC' : 'asc';
+
+
+            if ($request['sortColumn'] == 'avg_review') {
+                $books->withCount(['reviews as review_average' => function ($query) {
+                    $query->select(DB::raw('coalesce(avg(review),0)'));
+                }])->orderBy('review_average', $sortDirection);
+
+            } elseif ($request['sortColumn'] == 'title') {
+                $books->OrderBy($request['sortColumn'], $sortDirection);
+            }
         }
 
         return BookResource::collection($books->paginate());
