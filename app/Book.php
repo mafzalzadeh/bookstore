@@ -33,4 +33,14 @@ class Book extends Model
         $query->where('title','like','%'.$title.'%');
 
     }
+
+    public function scopeSearchAuthors($query, $authors){
+
+            $authors = explode(',', $authors);
+
+            $query->whereHas('authors', function ($query) use ($authors) {
+                $query->whereIn('author_id', $authors);
+            });
+
+    }
 }

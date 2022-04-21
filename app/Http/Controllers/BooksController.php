@@ -22,14 +22,7 @@ class BooksController extends Controller
 
         $this->searchTitle($request, $books);
 
-        if ($request->filled('authors')) {
-            $authors = explode(',', $request['authors']);
-
-            $books->whereHas('authors', function ($query) use ($authors){
-                $query->whereIn('author_id', $authors );
-            });
-;
-        }
+        $this->searchAuthors($request, $books);
 
         return BookResource::collection($books->paginate());
     }
@@ -52,6 +45,17 @@ class BooksController extends Controller
     {
         if ($request->filled('title')) {
             $books->searchTitle($request['title']);
+        }
+    }
+
+    /**
+     * @param Request $request
+     * @param \Illuminate\Database\Eloquent\Builder $books
+     */
+    protected function searchAuthors(Request $request, \Illuminate\Database\Eloquent\Builder $books): void
+    {
+        if ($request->filled('authors')) {
+            $books->searchAuthors($request['authors']);
         }
     }
 }
