@@ -31,7 +31,16 @@ class BooksController extends Controller
 
     public function post(PostBookRequest $request)
     {
-        //@todo code here
+        $book = new Book();
+        $book->title =$request['title'];
+        $book->isbn =$request['isbn'];
+        $book->description =$request['description'];
+        $book->save();
+
+        $book->authors()->attach($request['authors']);
+
+        return new BookResource($book);
+
     }
 
     public function postReview(Book $book, PostBookReviewRequest $request)
