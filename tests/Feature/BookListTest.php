@@ -90,7 +90,7 @@ class BooksListTest extends TestCase
     }
 
     public function testTitleFilter()
-    {$this->withoutExceptionHandling();
+    {
         $book1 = factory(Book::class)->create(['title' => 'PHP for begginers']);
         $book2 = factory(Book::class)->create(['title' => 'Javascript for dummies']);
         $book3 = factory(Book::class)->create(['title' => 'Advanced Python']);

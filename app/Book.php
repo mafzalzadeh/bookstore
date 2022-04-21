@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
 
 class Book extends Model
 {
@@ -42,5 +43,19 @@ class Book extends Model
                 $query->whereIn('author_id', $authors);
             });
 
+    }
+
+    public function scopeSorting($query, $sortColumn, $sortDirection)
+    {
+        $sortDirection = ($sortDirection && strtoupper($sortDirection) == 'DESC') ? 'DESC' : 'asc';
+
+        if ($sortColumn == 'avg_review') {
+            $query->withCount(['reviews as review_average' => function ($query) {
+                $query->select(DB::raw('coalesce(avg(review),0)'));
+            }])->orderBy('review_average', $sortDirection);
+
+        } elseif ($sortColumn == 'title') {
+            $query->OrderBy($sortColumn, $sortDirection);
+        }
     }
 }
