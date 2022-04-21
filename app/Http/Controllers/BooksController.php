@@ -24,6 +24,15 @@ class BooksController extends Controller
 
         $this->searchAuthors($request, $books);
 
+        if (isset($request['sortColumn'])) {
+
+            $sortDirection = ( isset($request['sortDirection'] ) && strtoupper( $request['sortDirection'] ) == 'DESC' ) ? 'DESC': 'asc';
+            if ($request['sortColumn'] == 'title'){
+                $books->OrderBy( $request['sortColumn'], $sortDirection );
+            }
+
+        }
+
         return BookResource::collection($books->paginate());
     }
 
