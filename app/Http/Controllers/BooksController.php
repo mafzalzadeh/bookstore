@@ -11,12 +11,15 @@ use App\Http\Requests\PostBookReviewRequest;
 use App\Http\Resources\BookResource;
 use App\Http\Resources\BookReviewResource;
 use Illuminate\Http\Request;
+use Illuminate\Http\Resources\Json\JsonResource;
+use Illuminate\Http\Resources\Json\ResourceCollection;
+use Illuminate\Http\Resources\Json\ResourceResponse;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 class BooksController extends Controller
 {
-    public function getCollection(Request $request)
+    public function getCollection(Request $request): ResourceCollection
     {
         $books = Book::query();
 
@@ -29,7 +32,7 @@ class BooksController extends Controller
         return BookResource::collection($books->paginate());
     }
 
-    public function post(PostBookRequest $request)
+    public function post(PostBookRequest $request): BookResource
     {
         $book = new Book();
         $book->title =$request['title'];
@@ -43,7 +46,7 @@ class BooksController extends Controller
 
     }
 
-    public function postReview(Book $book, PostBookReviewRequest $request)
+    public function postReview(Book $book, PostBookReviewRequest $request): BookReviewResource
     {
         $bookReview = new BookReview();
         $bookReview->review = $request['review'];
