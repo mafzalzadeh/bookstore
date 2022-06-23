@@ -19,6 +19,10 @@ use Illuminate\Support\Facades\DB;
 
 class BooksController extends Controller
 {
+    /**
+     * @param Request $request
+     * @return ResourceCollection
+     */
     public function getCollection(Request $request): ResourceCollection
     {
         $books = Book::query();
@@ -32,6 +36,10 @@ class BooksController extends Controller
         return BookResource::collection($books->paginate());
     }
 
+    /**
+     * @param PostBookRequest $request
+     * @return BookResource
+     */
     public function post(PostBookRequest $request): BookResource
     {
         $book = new Book();
@@ -46,6 +54,11 @@ class BooksController extends Controller
 
     }
 
+    /**
+     * @param Book $book
+     * @param PostBookReviewRequest $request
+     * @return BookReviewResource
+     */
     public function postReview(Book $book, PostBookReviewRequest $request): BookReviewResource
     {
         $bookReview = new BookReview();
